@@ -241,8 +241,10 @@ curso para ficar uma mão no lugar da seta */
 button {
     width: 30%;
     padding: 10px;
+    margin-top: 30px;
     background-color: var(--primaria) color#000 border: none;
     cursor: pointer;
+    
 
 
 }
@@ -320,7 +322,7 @@ button:focus {
 
 .box_cadastro {
     background-color: var(--secundaria);
-    width: 300px;
+    width: 500px;
     height: 550px;
     border-radius: 70px;
     display: flex;
