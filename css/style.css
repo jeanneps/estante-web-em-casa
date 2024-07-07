@@ -63,6 +63,7 @@ ainha o intens na vertical com base no seu centro*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 body {
@@ -99,7 +100,7 @@ footer {
 
 #alinhar {
     display: flex;
-    align-items: center;
+    align-items: center;  
 }
 
 .img-fim {
@@ -183,8 +184,8 @@ arredonda a borda da caixa  */
 
 input[type="email"] {
     width: calc(100% - 20px);
-    padding: 2px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
 
@@ -200,8 +201,8 @@ arredonda a borda da caixa  */
 
 input[type="password"] {
     width: calc(100% - 20px);
-    padding: 2px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
 
@@ -212,7 +213,10 @@ distancia da caixa */
 
 label {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 
 
 }
@@ -228,10 +232,7 @@ centraliza todo o item */
     align-items: center;
     flex-direction: column;
     margin: 0;
-
-
 }
-
 /* botao de entrar
 tamanho e largura
 cor de fundo 
@@ -242,23 +243,18 @@ button {
     width: 30%;
     padding: 10px;
     margin-top: 30px;
-    background-color: var(--primaria) color#000 border: none;
+    background-color: var(--primaria) color#000 border none;
     cursor: pointer;
     
-
-
 }
 
 button:houver {
     background-color: var(--primaria);
-
 }
 
 button:focus {
     outline: none;
-
 }
-
 
 .favoritos {
     margin: 0;
@@ -266,8 +262,6 @@ button:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .container {
@@ -282,8 +276,6 @@ button:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-
 }
 
 .conteiner2 {
@@ -294,7 +286,6 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .container3 {
@@ -316,33 +307,82 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     margin: 0;
 }
 
 .box_cadastro {
     background-color: var(--secundaria);
     width: 500px;
-    height: 550px;
+    height: 500px;
     border-radius: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
 }
 
 input[type="file"] {
     width: calc(100% - 20px);
-    padding: 2px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input[type="text"] {
     width: calc(100% - 20px);
-    padding: 2px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.perfil {
+display: flex;
+justify-content: center;
+
+}
+.conteiner_perfil {
+    width: 1000px;
+    height: 600px;
+    margin: 10px;
+    background-color: var(--secundaria);
+}
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+    background-color: #915f32;
+    border: 1px solid #000;
+    margin-top: 20px;
+    display: flex;
+    justify-content:space-evenly
+}
+.gerenciar_categorias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.categorias {
+    background-color: var(--secundaria);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.categorias2 {
+    border: 2px solid #000;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 30px
+
+
 }

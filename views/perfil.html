@@ -33,24 +33,46 @@
         <a href="login.html">Login</a>
     </nav>
 
-    <main class="favoritos">
-        <div class="container">
+    <main class="perfil">
+        <div class="conteiner_perfil">
+            <h1>Meu Perfil</h1>
+            <form>
+                <div>
+                    <label for="foto">Foto de Perfil:</label>
+                    <input type="file" name="foto" class="foto_perfil" accept="image/*">
+                </div>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome..." required>
 
-            <div class="conteiner2"><img src="../imgs/seta.svg" alt="" width="30px" height="30px">Livros Educativos
-            </div>
-            <div class="conteiner2"><img src="../imgs/seta.svg" alt="" width="30px" height="30px">Livros Religiosos
+                </div>
+                <div> <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Seu email..." required>
+                </div>
 
-            </div>
-            <div class="conteiner2"><img src="../imgs/seta.svg" alt="" width="30px" height="30px">Livros Romanticos
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Crie uma senha..." required>
+                </div>
 
-            </div>
-            <div class="conteiner2"><img src="../imgs/seta.svg" alt="" width="30px" height="30px">Livros Infantis
-            </div>
+                <div>
+                <label for="contato">Contato:</label>
+                <input type="number" name="contato" id="contato" placeholder="Insira seu contato..." required>
+                
+                </div>
+
+
+        <button type="submit" value="Entrar">Criar</button>
+        </form>
+
+        <ul>
+            <li>Gerenciar Categorias</li>
+            <li>Gerenciar Livros</li>
+        </ul>
+
+
 
         </div>
-
-        <div class="container3"> Não há categorias adicionadas</div>
-
     </main>
     <footer>
         <div id="copy">
