@@ -325,8 +325,7 @@ input[type="file"] {
     padding: 5px;
     font-size: 15px;
     border: 2px solid #000;
-    border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;   
 }
 
 input[type="text"] {
@@ -335,7 +334,6 @@ input[type="text"] {
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .perfil {
 display: flex;
@@ -354,14 +352,6 @@ input[type="number"] {
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-ul {
-    background-color: #915f32;
-    border: 1px solid #000;
-    margin-top: 20px;
-    display: flex;
-    justify-content:space-evenly
 }
 .gerenciar_categorias{
     display: flex;
@@ -383,6 +373,24 @@ ul {
     width: 400px;
     height: 50px;
     margin-bottom: 30px
+}
+.adicionar_categorias{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+.ad_categorias{
+    background-color: var(--secundaria);
+    width: 400px;
+    height: 400px;
+}
+.ad_categoria2 {
+    border: 2px solid #000;
+    border-radius: 50px;
+    width: 300px;
+    height: 50px;
+    background-color: var(--terciaria);
+    
 
 
 }
