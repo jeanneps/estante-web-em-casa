@@ -100,7 +100,7 @@ footer {
 
 #alinhar {
     display: flex;
-    align-items: center;  
+    align-items: center;
 }
 
 .img-fim {
@@ -152,7 +152,7 @@ tamango da fonte */
 
 
 }
- 
+
 
 /* cor de fundo 
 tamanho e largura da caixa width e height
@@ -233,6 +233,7 @@ centraliza todo o item */
     flex-direction: column;
     margin: 0;
 }
+
 /* botao de entrar
 tamanho e largura
 cor de fundo 
@@ -240,12 +241,12 @@ cor preta
 borda do botao
 curso para ficar uma mão no lugar da seta */
 button {
-    width: 30%;
+    width: 40%;
     padding: 10px;
     margin-top: 30px;
     background-color: var(--primaria) color#000 border none;
     cursor: pointer;
-    
+
 }
 
 button:houver {
@@ -325,7 +326,7 @@ input[type="file"] {
     padding: 5px;
     font-size: 15px;
     border: 2px solid #000;
-    border-radius: 4px;   
+    border-radius: 4px;
 }
 
 input[type="text"] {
@@ -335,17 +336,20 @@ input[type="text"] {
     border: 2px solid #000;
     border-radius: 4px;
 }
+
 .perfil {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 
 }
+
 .conteiner_perfil {
     width: 1000px;
     height: 600px;
     margin: 10px;
     background-color: var(--secundaria);
 }
+
 input[type="number"] {
     width: calc(100% - 20px);
     padding: 5px;
@@ -353,12 +357,14 @@ input[type="number"] {
     border: 2px solid #000;
     border-radius: 4px;
 }
-.gerenciar_categorias{
+
+.gerenciar_categorias {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
+
 .categorias {
     background-color: var(--secundaria);
     width: 500px;
@@ -368,29 +374,39 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
 }
+
 .categorias2 {
     border: 2px solid #000;
     width: 400px;
     height: 50px;
     margin-bottom: 30px
 }
-.adicionar_categorias{
-    display:flex ;
+
+.adicionar_categorias {
+    box-sizing: border-box;
+    display: flex;
     align-items: center;
     justify-content: center;
+
+
 }
-.ad_categorias{
+
+.ad_categorias {
     background-color: var(--secundaria);
     width: 400px;
-    height: 400px;
+    height: 200px;
+    text-align: center;
 }
-.ad_categoria2 {
-    border: 2px solid #000;
-    border-radius: 50px;
-    width: 300px;
-    height: 50px;
-    background-color: var(--terciaria);
-    
 
-
+.gerenciar_livros2 {
+    background-color: var(--secundaria);
+    width: 400px;
+    height: 200px;
+    text-align: center;
+}
+.ad_livros {
+    background-color: var(--secundaria);
+    width: 400px;
+    height: 650px;
+    text-align: center;
 }
