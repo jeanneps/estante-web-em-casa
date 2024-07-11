@@ -35,19 +35,31 @@
 
     <main class="adicionar_categorias">
 
-        <div class="ad_categorias">
-            <h2 style="border:
-            width: 200px;
-            height: 50px;
-            background-color: var(--primaria)">
-                Editar Livros</h2>
+        <div class="ad_livros">
+            <h2 class="box">Editar Livro <img src="../imgs/config.svg" alt="" width="40px" height="40px"></h2>
+
             <form action="">
                 <div>
-                    <label for="adicionar categoria"></label>
-                    <input type="text" name="adicionar categoria" id="nome" value="" placeholder="">
+                    <label for="adicionar imagem"></label>
+                    <input type="file" name="adicionar imagem" id="fotos" accept="image/*">
                 </div>
 
-                <div class="ad_categoria3"><button type="submit" value="Adicionar">Adicionar</button></div>
+                <div>
+                    <label for="adicionar categoria"></label>
+                    <input type="text" name="adicionar categoria" id="titulo" value="" placeholder="Digite o Titulo">
+
+                    <label for="adicionar categoria"></label>
+                    <input type="text" name="adicionar categoria" id="titulo" value="" placeholder="Digite o Autor">
+
+                    <label for="adicionar categoria"></label>
+                    <input type="text" name="adicionar categoria" id="titulo" value="" placeholder="Digite a Categoria">
+
+                    <label for="sinopse"></label>
+                    <textarea name="Digite a sinopse" id="sinopse" cols="58" rows="10">Digite a Sinopse...</textarea placeholder="Digite a Sinopse ">
+                </div>
+
+                <div><button type="submit" value="Adicionar">Salvar</button></div>
+                <div ><button type="submit" value="Adicionar">Deletar</button></div>
             </form>
         </div>
     </main>

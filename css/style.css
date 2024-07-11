@@ -63,7 +63,6 @@ ainha o intens na vertical com base no seu centro*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 body {
@@ -123,19 +122,19 @@ da espaco entre eles
 .quem_somos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    justify-content: space-around;
-    padding: 150px;
-
+    padding: 80px;
 }
 
 /* cor de fundo
-tamanho da caixa */
+tamanho da caixa
+margin para baixo */
 .box_quemsomos {
     background-color: var(--primaria);
     width: 200px;
+    margin-bottom: 40px;
+
 
 }
 
@@ -149,8 +148,6 @@ tamango da fonte */
     justify-content: center;
     align-items: center;
     font-size: 30px;
-
-
 }
 
 
@@ -163,16 +160,14 @@ centraliza os itens na vertical
 centraliza os itens na horizontal*/
 .box_usuario {
     background-color: var(--secundaria);
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 300px;
     text-align: center;
     border-radius: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 }
 
 /* input para digitar email
@@ -181,7 +176,6 @@ preenchimento de dentro da caixa
 tamanho da fonte(letras)
 borda em volta da caixa
 arredonda a borda da caixa  */
-
 input[type="email"] {
     width: calc(100% - 20px);
     padding: 5px;
@@ -197,31 +191,22 @@ preenchimento de dentro da caixa
 tamanho da fonte(letras)
 borda em volta da caixa
 arredonda a borda da caixa  */
-
-
 input[type="password"] {
     width: calc(100% - 20px);
     padding: 5px;
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
-
 }
 
 /* label texto acima da caixa se senha e login
 distancia da caixa */
-
 label {
     display: block;
-    margin-bottom: 20px;
-    margin-top: 15px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-
-
+    margin-bottom: 10px;
+    margin-top: 8px;
+    font-size: 15px;
 }
-
-
 /* class usuario main 
 alinha os itens ao centro
 centraliza todo o item */
@@ -231,7 +216,6 @@ centraliza todo o item */
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0;
 }
 
 /* botao de entrar
@@ -241,9 +225,10 @@ cor preta
 borda do botao
 curso para ficar uma mão no lugar da seta */
 button {
-    width: 40%;
+    width: 30%;
     padding: 10px;
     margin-top: 30px;
+    margin-bottom: 20px;
     background-color: var(--primaria) color#000 border none;
     cursor: pointer;
 
@@ -261,15 +246,13 @@ button:focus {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .container {
     width: 250px;
-    height: 700px;
+    height: 600px;
     /* largura do container */
-    margin: 10px;
+    margin: 15px;
     padding: 10px;
     /* preenchimento interno */
     background-color: var(--secundaria);
@@ -283,7 +266,7 @@ button:focus {
     border: 2px solid #000;
     width: 200px;
     height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,7 +274,7 @@ button:focus {
 
 .container3 {
     width: 1500px;
-    height: 700px;
+    height: 600px;
     /* largura do container */
     margin: 10px;
     /* margem externa para espaçamento */
@@ -303,19 +286,24 @@ button:focus {
     align-items: center;
     justify-content: center;
 }
-
+#foto {
+    width: 140px;
+    height: 120px;
+    object-fit: cover;
+    overflow: hidden;
+}
 .cadastro {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-}
 
+
+}
 .box_cadastro {
     background-color: var(--secundaria);
-    width: 500px;
+    width: 350px;
     height: 500px;
-    border-radius: 70px;
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,15 +327,22 @@ input[type="text"] {
 
 .perfil {
     display: flex;
+    align-items: center;
     justify-content: center;
-
+}
+#fotos2 {
+    width: 140px;
+    height: 120px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .conteiner_perfil {
-    width: 1000px;
-    height: 600px;
-    margin: 10px;
+    width: 300px;
+    height: 550px;
+    margin: 20px;
     background-color: var(--secundaria);
+    padding: 15px;
 }
 
 input[type="number"] {
@@ -365,6 +360,7 @@ input[type="number"] {
 
 }
 
+
 .categorias {
     background-color: var(--secundaria);
     width: 500px;
@@ -372,14 +368,24 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+.box {
+    background-color: #915f32;
+    width: 500px;
+    height: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .categorias2 {
     border: 2px solid #000;
-    width: 400px;
-    height: 50px;
+    width: 350px;
+    height: 70px;
+    padding: 10px;
     margin-bottom: 30px
+
 }
 
 .adicionar_categorias {
@@ -387,26 +393,31 @@ input[type="number"] {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .ad_categorias {
     background-color: var(--secundaria);
-    width: 400px;
+    width: 500px;
     height: 200px;
+    text-align: center 
+}
+.gerenciar_livros2 {
+    background-color: var(--secundaria);
+    width: 500px;
+    height: 270px;
     text-align: center;
 }
 
-.gerenciar_livros2 {
-    background-color: var(--secundaria);
-    width: 400px;
-    height: 200px;
-    text-align: center;
-}
 .ad_livros {
     background-color: var(--secundaria);
-    width: 400px;
-    height: 650px;
+    width: 500px;
+    height: 700px;
     text-align: center;
+    margin: 15px;
+}
+#fotos {
+        width: 140px;
+        height: 120px;
+        object-fit: cover;
+        overflow: hidden;
 }
