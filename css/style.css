@@ -124,11 +124,11 @@ da espaco entre eles
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 80px;
+    padding: 100px;
 }
 
 #quem_somos {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 /* cor de fundo
@@ -344,7 +344,13 @@ input[type="text"] {
     justify-content: center;
 }
 
-#fotos2 {
+#foto_de_perfil {
+    width: 140px;
+    height: 120px;
+    object-fit: cover;
+    overflow: hidden;
+}
+#adicionar_imagem {
     width: 140px;
     height: 120px;
     object-fit: cover;
@@ -581,13 +587,11 @@ input[type="number"] {
         padding: 10px;
         text-align: center;
     }
-
-    form {
+/*  form {
         margin-left: 0;
         margin-top: 3px;
-        /* Espaçamento entre o título e o formulário em telas menores */
-    }
-
+        /* Espaçamento entre o título e o formulário em telas menores */ 
+ 
     .box_usuario {
         width: 70vw;
         margin-bottom: 15vw;
@@ -596,10 +600,9 @@ input[type="number"] {
         padding: 0 10px;
         /* Exemplo de ajuste de padding para evitar a rolagem lateral */
     }
-
-    #busca {
-        width: 28vw;
-        margin-right: vw;
+    .logo-busca {
+        white-space: nowrap;
+        /* Impede a quebra de linha dos links */
     }
 
     .container_perfil {

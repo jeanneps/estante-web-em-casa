@@ -17,13 +17,15 @@
             <h1>Estante Web</h1>
 
             <form action="">
-                <input type="search" name="busca" id="busca">
+                <label for="busca"></label>
+                <input type="search" name="busca" id="busca" style="width: 200px; height: 25px;">
             </form>
 
         </div>
 
     </header>
-    <nav>
+    <nav aria-label="Navegação principal">
+
         <a href="../index.html">inicio</a>
         <a href="quem_somos.html">Quem somos</a>
         <a href="contato.html">Contato</a>
@@ -47,13 +49,16 @@
 
                 <div>
                     <label for="adicionar titulo"></label>
-                    <input type="text" name="adicionar titulo" id="adicionar titulo" value="" placeholder="Digite o Titulo">
+                    <input type="text" name="adicionar titulo" id="adicionar titulo" value=""
+                        placeholder="Digite o Titulo">
 
                     <label for="adicionar autor"></label>
-                    <input type="text" name="adicionar autor" id="adicionar autor" value="" placeholder="Digite o Autor">
+                    <input type="text" name="adicionar autor" id="adicionar autor" value=""
+                        placeholder="Digite o Autor">
 
                     <label for="adicionar categoria"></label>
-                    <input type="text" name="adicionar categoria" id="adicionar categoria" value="" placeholder="Digite a Categoria">
+                    <input type="text" name="adicionar categoria" id="adicionar categoria" value=""
+                        placeholder="Digite a Categoria">
 
                     <label for="sinopse"></label>
                     <textarea name="sinopse" id="sinopse" cols="58" rows="10"></textarea placeholder="Digite a Sinopse ">
