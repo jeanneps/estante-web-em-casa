@@ -256,7 +256,7 @@ button:focus {
     padding: 0;
     display: flex;
 }
-
+/* conteier de favoritos */
 .container {
     width: 250px;
     height: 600px;
@@ -270,9 +270,15 @@ button:focus {
     flex-direction: column;
     justify-content: center;
 }
-
+/* 
+conteiner de favoritos
+borda do conteiner
+altura e largura do conteiner
+margin arrasta para baixo
+alinha os itens no centro horizontal
+alinha os itens no centro vertical */
 .conteiner2 {
-    border: 2px solid #000;
+    border: 2px solid #000; 
     width: 180px;
     height: 50px;
     margin-bottom: 18px;
@@ -280,7 +286,7 @@ button:focus {
     justify-content: center;
     align-items: center;
 }
-
+/* conteiner de favoritos */
 .container3 {
     width: 1200px;
     height: 750px;
@@ -295,14 +301,15 @@ button:focus {
     align-items: center;
     justify-content: center;
 }
-
+/* altura e largura do formulario foto */
 #foto {
     width: 140px;
     height: 120px;
     object-fit: cover;
     overflow: hidden;
 }
-
+/* main da pagina de cadastro 
+alinha todos os itens centro horizontal e vertical*/
 .cadastro {
     display: flex;
     justify-content: center;
@@ -310,7 +317,12 @@ button:focus {
 
 
 }
-
+/* conteiner do cadastro 
+cor de fundo 
+altura e largura 
+borda arredondada
+alinha os itens em coluna
+alinha os itens no centro vertical*/
 .box_cadastro {
     background-color: var(--secundaria);
     width: 350px;
@@ -320,7 +332,7 @@ button:focus {
     flex-direction: column;
     align-items: center;
 }
-
+/* input foto */
 input[type="file"] {
     width: calc(100% - 20px);
     padding: 4px;
@@ -328,7 +340,7 @@ input[type="file"] {
     border: 2px solid #000;
     border-radius: 10px;
 }
-
+/* intut nome */
 input[type="text"] {
     width: calc(100% - 20px);
     padding: 4px;
@@ -336,27 +348,27 @@ input[type="text"] {
     border: 2px solid #000;
     border-radius: 4px;
 }
-
+/* main da pagina perfil */
 .perfil {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+/* input foto da pagina perfil */
 #foto_de_perfil {
     width: 140px;
     height: 120px;
     object-fit: cover;
     overflow: hidden;
 }
-
+/* input imagem da pagina adicionar livro */
 #adicionar_imagem {
     width: 140px;
     height: 120px;
     object-fit: cover;
     overflow: hidden;
 }
-
+/* conteiner da pagina perfil */
 .container_perfil {
     width: 400px;
     height: 600px;
@@ -364,7 +376,7 @@ input[type="text"] {
     background-color: var(--secundaria);
     padding: 15px;
 }
-
+/* input de contato */
 input[type="tel"] {
     width: calc(100% - 20px);
     padding: 4px;
