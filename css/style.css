@@ -146,7 +146,7 @@ margin para baixo */
 centraliza o texto
 centraliza os itens
 tamango da fonte */
-.contato {
+#contato {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -187,7 +187,7 @@ borda em volta da caixa
 arredonda a borda da caixa  */
 input[type="email"] {
     width: calc(100% - 20px);
-    padding: 5px;
+    padding: 4px;
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
@@ -202,7 +202,7 @@ borda em volta da caixa
 arredonda a borda da caixa  */
 input[type="password"] {
     width: calc(100% - 20px);
-    padding: 5px;
+    padding: 4px;
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
@@ -212,8 +212,8 @@ input[type="password"] {
 distancia da caixa */
 label {
     display: block;
-    margin-bottom: 10px;
-    margin-top: 8px;
+    margin-bottom: 8px;
+
     font-size: 15px;
 }
 
@@ -237,8 +237,7 @@ curso para ficar uma mão no lugar da seta */
 button {
     width: 30%;
     padding: 10px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 10px;
     background-color: var(--primaria) color#000 border none;
     cursor: pointer;
 
@@ -252,7 +251,7 @@ button:focus {
     outline: none;
 }
 
-.favoritos {
+#favoritos {
     margin: 0;
     padding: 0;
     display: flex;
@@ -315,7 +314,7 @@ button:focus {
 .box_cadastro {
     background-color: var(--secundaria);
     width: 350px;
-    height: 500px;
+    height: 400px;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
@@ -324,7 +323,7 @@ button:focus {
 
 input[type="file"] {
     width: calc(100% - 20px);
-    padding: 5px;
+    padding: 4px;
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 10px;
@@ -332,7 +331,7 @@ input[type="file"] {
 
 input[type="text"] {
     width: calc(100% - 20px);
-    padding: 5px;
+    padding: 4px;
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
@@ -350,6 +349,7 @@ input[type="text"] {
     object-fit: cover;
     overflow: hidden;
 }
+
 #adicionar_imagem {
     width: 140px;
     height: 120px;
@@ -358,16 +358,16 @@ input[type="text"] {
 }
 
 .container_perfil {
-    width: 300px;
-    height: 650px;
+    width: 400px;
+    height: 600px;
     margin: 20px;
     background-color: var(--secundaria);
     padding: 15px;
 }
 
-input[type="number"] {
+input[type="tel"] {
     width: calc(100% - 20px);
-    padding: 5px;
+    padding: 4px;
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 4px;
@@ -379,7 +379,6 @@ input[type="number"] {
     justify-content: center;
 
 }
-
 
 .categorias {
     background-color: var(--secundaria);
@@ -437,6 +436,12 @@ input[type="number"] {
     height: 700px;
     text-align: center;
     margin: 15px;
+}
+
+#adicionar_livros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #adicionar_imagem {
@@ -587,11 +592,12 @@ input[type="number"] {
         padding: 10px;
         text-align: center;
     }
-/*  form {
+
+    /*  form {
         margin-left: 0;
         margin-top: 3px;
-        /* Espaçamento entre o título e o formulário em telas menores */ 
- 
+        /* Espaçamento entre o título e o formulário em telas menores */
+
     .box_usuario {
         width: 70vw;
         margin-bottom: 15vw;
@@ -600,6 +606,7 @@ input[type="number"] {
         padding: 0 10px;
         /* Exemplo de ajuste de padding para evitar a rolagem lateral */
     }
+
     .logo-busca {
         white-space: nowrap;
         /* Impede a quebra de linha dos links */

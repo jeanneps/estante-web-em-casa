@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Estante Web</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../imgs/favicon.icon.jpg" type="image/x-icon">
-
 </head>
 
 <body>
@@ -17,58 +15,52 @@
             <h1>Estante Web</h1>
 
             <form action="">
-                <label for="busca"></label>
+                <label for="busca">Busca</label>
                 <input type="search" name="busca" id="busca" style="width: 200px; height: 25px;">
             </form>
 
         </div>
 
     </header>
-    <nav aria-label="Navegação principal">
 
-        <a href="../index.html">inicio</a>
+    <nav aria-label="Navegação principal">
+        <a href="../index.html">Início</a>
         <a href="quem_somos.html">Quem somos</a>
         <a href="contato.html">Contato</a>
-        <a href="favoritos.html" class="alinhar">
-            <img src="../imgs/star.png.png" alt="" width="20px" height="20px">
+        <a href="favoritos.html">
+            <img src="../imgs/star.png.png" alt="Ícone de Favoritos" width="20px" height="20px">
             Favoritos
         </a>
         <a href="login.html">Login</a>
     </nav>
 
-    <main class="adicionar_categorias">
-
-        <div class="ad_livros">
-            <h2 class="box">Adicionar Livro <img src="../imgs/config.svg" alt="" width="40px" height="40px"></h2>
-
+    <main id="adicionar_livros">
+        <section class="ad_livros">
+            <h2 class="box" >Adicionar Livro <img src="../imgs/config.svg" alt="Ícone de Configuração" width="40px" height="40px"></h2>
             <form action="">
-                <div>
-                    <label for="adicionar_imagem"></label>
-                    <input type="file" name="adicionar_imagem" id="adicionar_imagem" accept="image/*">
-                </div>
+                <label for="adicionar_imagem">Imagem:</label>
+                <input type="file" name="adicionar_imagem" id="adicionar_imagem" accept="image/*">
 
-                <div>
-                    <label for="adicionar titulo"></label>
-                    <input type="text" name="adicionar titulo" id="adicionar titulo" value=""
-                        placeholder="Digite o Titulo">
+        
+                    <label for="adicionar_titulo">Título:</label>
+                    <input type="text" name="adicionar_titulo" id="adicionar_titulo" placeholder="Digite o Título">
 
-                    <label for="adicionar autor"></label>
-                    <input type="text" name="adicionar autor" id="adicionar autor" value=""
-                        placeholder="Digite o Autor">
+                    <label for="adicionar_autor">Autor:</label>
+                    <input type="text" name="adicionar_autor" id="adicionar_autor" placeholder="Digite o Autor">
 
-                    <label for="adicionar categoria"></label>
-                    <input type="text" name="adicionar categoria" id="adicionar categoria" value=""
-                        placeholder="Digite a Categoria">
+                    <label for="adicionar_categoria">Categoria:</label>
+                    <input type="text" name="adicionar_categoria" id="adicionar_categoria" placeholder="Digite a Categoria">
 
-                    <label for="sinopse"></label>
-                    <textarea name="sinopse" id="sinopse" cols="58" rows="10"></textarea placeholder="Digite a Sinopse ">
-                </div>
+                    <label for="sinopse">Sinopse:</label>
+                    <textarea name="sinopse" id="sinopse" cols="58" rows="10" placeholder="Digite a Sinopse"></textarea>
+               
 
-                <div ><button type="submit" value="Salvar">Salvar</button></div>
-                <div ><button type="submit" value="Apagar">Apagar</button></div>
+                <button type="submit" value="Salvar">Salvar</button>
+                <button type="reset" value="Apagar">Apagar</button>
             </form>
-        </div>
+        </section>
     </main>
+
     <footer>
         <div id="copy">
             &copy; Estante web
@@ -82,6 +74,7 @@
         </div>
 
     </footer>
+
 
 </body>
 

@@ -17,7 +17,7 @@
             <h1>Estante Web</h1>
 
             <form action="">
-                <label for="busca"></label>
+                <label for="busca">Busca</label>
                 <input type="search" name="busca" id="busca"style="width: 200px; height: 25px;">
             </form>
 
@@ -29,21 +29,21 @@
         <a href="quem_somos.html">Quem somos</a>
         <a href="contato.html">Contato</a>
         <a href="favoritos.html" class="alinhar">
-            <img src="../imgs/star.png.png" alt="" width="20px" height="20px">
+            <img src="../imgs/star.png.png" alt="ícone de favoritos" width="20px" height="20px">
             Favoritos
         </a>
         <a href="login.html">Login</a>
     </nav>
 
     <main class="perfil">
-        <div class="container_perfil">
+       <section class="container_perfil">
             <h1>Meu Perfil</h1>
             <form>
                 <div>
                     <label for="foto_de_perfil">Foto de Perfil:</label>
                     <input type="file" name="foto_de_perfil" id="foto_de_perfil" accept="image/*">
                 </div>
-                <div>
+               
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" placeholder="Nome..." required>
 
@@ -53,21 +53,23 @@
                     <label for="senha">Senha:</label>
                     <input type="password" name="senha" id="senha" placeholder="senha..." required>
             
-                    <label for="contato">Contato:</label>
-                    <input type="number" name="contato" id="contato" placeholder="Contato..." required>
+                    <label for="Contato">Contato:</label>
+                    <input type="tel" id="Contato" name="Contato" placeholder="(XX) XXXX-XXXX" pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" required>
             
-                </div>
+               
 
 
                     <button type="submit" value="Gravar">Gravar</button>
 
-                   <div></div> <button type="submit" value="Gerenciar Categorias">Gerenciar Categorias</button>
-                    <button type="submit" value="Gerenciar livros">Gerenciar livros</button></div>
+                   <div><button type="submit" value="Gerenciar Categorias">Gerenciar Categorias</button></div>
+                   <div> <button type="submit" value="Gerenciar livros">Gerenciar livros</button></div>
       
     
          </form>
 
-        </div>
+        </section>
+
+      
     </main>
     <footer>
         <div id="copy">
@@ -77,8 +79,8 @@
             todos os direitos reservados
         </div>
         <div>
-            <img src="../imgs/facebook.svg" alt="" width="30px" height="30px">
-            <img src="../imgs/instagram.svg" alt="" width="30px" height="30px">
+            <img src="../imgs/facebook.svg" alt="ícone do facebook" width="30px" height="30px">
+            <img src="../imgs/instagram.svg" alt="ícone do instagram" width="30px" height="30px">
         </div>
 
     </footer>
