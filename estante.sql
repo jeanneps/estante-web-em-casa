@@ -1,0 +1,5 @@
+CREATE DATABASE estante;
+
+USE estante;
+
+CREATE TABLE
