@@ -42,7 +42,6 @@ CREATE TABLE Favoritos (
     id_favorito INT AUTO_INCREMENT PRIMARY KEY, -- Identificador único do favorito (chave primária, autoincrementa)
     id_usuario INT, -- Identificador do usuário que favoritou o livro (chave estrangeira)
     id_livro INT, -- Identificador do livro que foi favoritado (chave estrangeira)
-    data_favorito DATETIME DEFAULT CURRENT_TIMESTAMP, -- Data e hora em que o livro foi favoritado (valor padrão é a data e hora atual)
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE, -- Chave estrangeira referenciando 'Usuarios', exclui entradas na tabela se o usuário for removido
     FOREIGN KEY (id_livro) REFERENCES Livros(id_livro) ON DELETE CASCADE -- Chave estrangeira referenciando 'Livros', exclui entradas na tabela se o livro for removido
 );
