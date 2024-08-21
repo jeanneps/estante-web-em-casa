@@ -1,4 +1,4 @@
-</main>
+
     <footer>
         <div id="copy">
             &copy; Estante web

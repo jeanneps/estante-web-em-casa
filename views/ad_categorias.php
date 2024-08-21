@@ -2,7 +2,7 @@
 require_once 'cabeçalho.php';
 ?>
 
-    <div class="adicionar_categorias">
+    <main class="adicionar_categorias">
 
         <section class="ad_categorias">
             <h2 class="box">
@@ -14,7 +14,7 @@ require_once 'cabeçalho.php';
                 <button type="submit" value="Adicionar">Adicionar</button>
             </form>
         </section>
-    </div>
+    </main>
 
  <?php
  require_once 'rodapé.php';

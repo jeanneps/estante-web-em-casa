@@ -78,10 +78,7 @@ main {
 }
 
 #index {
-    background-image: url("../imgs/estanteweb.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
+   display: block;
 
 }
 
