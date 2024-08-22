@@ -45,3 +45,4 @@ CREATE TABLE Favoritos (
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE, -- Chave estrangeira referenciando 'Usuarios', exclui entradas na tabela se o usuário for removido
     FOREIGN KEY (id_livro) REFERENCES Livros(id_livro) ON DELETE CASCADE -- Chave estrangeira referenciando 'Livros', exclui entradas na tabela se o livro for removido
 );
+

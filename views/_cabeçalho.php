@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Estante Web</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="imgs/favicon.icon.jpg" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="logo-busca">
@@ -30,6 +30,6 @@
             Favoritos
         </a>
         <a href="views/login.html">Login</a>
-
     </nav>
-
+    
+ 

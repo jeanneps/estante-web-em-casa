@@ -1,11 +1,14 @@
 <?php
-require_once 'cabeçalho.php';
+require_once 'views/_cabeçalho.php'; 
 ?>
 
-    <main id="index">
+
+<main id="index">
+    <p>exibir todos os livros
+
+    </p>
 
 
-    </main>
     <?php
-require_once 'rodapé.php';
+require_once 'views/_rodapé.php'; 
 ?>
