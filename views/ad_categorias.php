@@ -1,5 +1,5 @@
 <?php
-require_once '_cabeçalho.php';
+require_once '../_cabeçalho.php';
 ?>
 
 <main class="adicionar_categorias">
@@ -17,5 +17,5 @@ require_once '_cabeçalho.php';
 
 
     <?php
-    require_once '_rodapé.php';
+    require_once '../_rodapé.php';
     ?>
