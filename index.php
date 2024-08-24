@@ -1,5 +1,5 @@
 <?php
-require_once 'views/_cabeçalho.php'; 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
 ?>
 
 
@@ -10,5 +10,5 @@ require_once 'views/_cabeçalho.php';
 
 
     <?php
-require_once 'views/_rodapé.php'; 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
 ?>

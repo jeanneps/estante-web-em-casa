@@ -1,5 +1,5 @@
 <?php
-require_once 'cabeçalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
 ?>
 
     <main id="favoritos">
@@ -13,7 +13,7 @@ require_once 'cabeçalho.php';
             </div>
             <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Ficção
             </div>
-            <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Suspense e mistério
+            <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Suspense e terror
             </div>
             <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Infantil
             </div>
@@ -28,5 +28,5 @@ require_once 'cabeçalho.php';
 
     </main>
     <?php
-require_once 'rodapé.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
 ?>

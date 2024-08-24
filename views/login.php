@@ -1,5 +1,5 @@
 <?php
-require_once 'cabeçalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
 ?>
 
     <main class="usuario">
@@ -29,11 +29,11 @@ require_once 'cabeçalho.php';
 
       
         <h4>Ainda não é cadastrado?</h4>
-        <h4><a href="../views/cadastro.html">Crie sua conta</a></h4>
+        <h4><a href="/jeane/estante_webviews/cadastro.html">Crie sua conta</a></h4>
 
 
 
     </main>
     <?php
-require_once 'rodapé.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
 ?>

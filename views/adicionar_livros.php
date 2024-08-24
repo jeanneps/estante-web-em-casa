@@ -1,5 +1,5 @@
 <?php
-require_once 'cabeçalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
 ?>
     <main id="adicionar_livros">
         <section class="ad_livros">
@@ -29,5 +29,5 @@ require_once 'cabeçalho.php';
     </main>
 
     <?php
-require_once 'rodapé.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
 ?>

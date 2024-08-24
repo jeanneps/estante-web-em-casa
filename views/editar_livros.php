@@ -1,5 +1,5 @@
 <?php
-require_once 'cabeçalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
 ?>
 
     <main class="adicionar_categorias">
@@ -31,5 +31,5 @@ require_once 'cabeçalho.php';
         </section>
     </main>
     <?php
-require_once 'rodapé.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
 ?>
