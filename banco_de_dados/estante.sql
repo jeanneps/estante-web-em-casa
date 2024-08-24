@@ -20,7 +20,7 @@ CREATE TABLE Livros (
     autor VARCHAR(255) NOT NULL, -- Autor do livro (não nulo)
     sinopse TEXT, -- Sinopse do livro
     categoria VARCHAR(255), -- categoria do livro
-    capa VARCHAR(255) BLOB -- Caminho ou URL da imagem da capa do livro
+    capa VARCHAR(255) BLOB  -- Caminho ou URL da imagem da capa do livro
 );
 
 -- Cria a tabela 'Categorias'
