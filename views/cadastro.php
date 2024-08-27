@@ -7,11 +7,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 
         <h1>Crie sua conta</h1>
 
-        <form>
+        <form action="/jeane/estante_web/controllers/usuarios_controller.php" method="post">
 
         <div>
             <label for="foto">Foto de Perfil:</label>
-            <input type="file" name="foto" id="foto" accept="image/*">
+            <input type="file" name="foto_perfil" id="foto" accept="image/*">
         </div>
         
             <label for="nome">Nome:</label>

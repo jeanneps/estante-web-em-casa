@@ -9,7 +9,7 @@ CREATE TABLE Usuarios (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY, -- Identificador único do usuário (chave primária, autoincrementa)
     email VARCHAR(255) UNIQUE NOT NULL, -- E-mail do usuário (único e não nulo)
     senha VARCHAR(255) NOT NULL, -- Senha do usuário (não nula)
-    foto_perfil VARCHAR(255) BLOB, -- Caminho ou URL da foto de perfil do usuário
+    foto_perfil LONGBLOB, -- Caminho ou URL da foto de perfil do usuário
     nome VARCHAR(255) -- Nome do usuário
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE Livros (
     autor VARCHAR(255) NOT NULL, -- Autor do livro (não nulo)
     sinopse TEXT, -- Sinopse do livro
     categoria VARCHAR(255), -- categoria do livro
-    capa VARCHAR(255) BLOB  -- Caminho ou URL da imagem da capa do livro
+    capa VARCHAR(255) LONGBLOB  -- Caminho ou URL da imagem da capa do livro
 );
 
 -- Cria a tabela 'Categorias'
