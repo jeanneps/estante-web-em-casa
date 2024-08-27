@@ -1,0 +1,33 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/models/favoritos_models.php';
+
+class FavoritoController {
+    public $favorito;
+
+    public function __construct($pdo) {
+        $this->favorito = new Favorito($pdo);
+    }
+
+    public function adicionarFavorito($id_usuario, $id_livro) {
+        if ($this->favorito->adicionarFavorito($id_usuario, $id_livro)) {
+            echo "Favorito adicionado com sucesso!";
+        } else {
+            echo "Erro ao adicionar favorito.";
+        }
+    }
+
+    public function removerFavorito($id_usuario, $id_livro) {
+        if ($this->favorito->removerFavorito($id_usuario, $id_livro)) {
+            echo "Favorito removido com sucesso!";
+        } else {
+            echo "Erro ao remover favorito.";
+        }
+    }
+
+    public function listarFavoritos($id_usuario) {
+        $favoritos = $this->favorito->listarFavoritos($id_usuario);
+        foreach ($favoritos as $favorito) {
+            echo "ID Livro: " . $favorito['id_livro'] . "<br>";
+        }
+    }
+}
