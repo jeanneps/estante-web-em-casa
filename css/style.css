@@ -81,6 +81,20 @@ main {
    display: block;
 
 }
+#capa {
+    border: 1px solid black ;
+    width: 80px;
+    height: 100px;
+   
+
+}
+#capa2 {
+    border: 1px solid black ;
+    width: 100px;
+    height: 200px;
+   
+
+}
 
 footer {
     display: grid;
