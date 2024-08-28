@@ -1,3 +1,10 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/auth/auth.php';
+// if (!Auth::estarLogado()) {
+//     header('Location: /jeane/estante_web/views/login.php');
+// }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,6 +23,7 @@
                 <label for="busca">Buscar</label>
                 <input type="search" name="busca" id="busca" style="width: 200px; height: 25px;">
             </form>
+           <a href="/jeane/estante_web/controllers/logout_controller.php ">Sair</a>
 
         </div>
 
@@ -30,6 +38,8 @@
             Favoritos
         </a>
         <a href="/jeane/estante_web/views/login.php">Login</a>
+
+        
     </nav>
     
  

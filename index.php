@@ -4,9 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 
 
 <main id="index">
-    <p>exibir todos os livros
-
-    </p>
+   <div>exibir todos os livros</div>
 
 
     <?php
