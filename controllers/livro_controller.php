@@ -23,5 +23,7 @@ if(isset($capa)){
 }
 
 
-$livro->listarLivros();
+$livro->cadastrarLivros();
+$livro->selecionarLivro($id_livro);
+$livro->mostrarLivros();
 exit();

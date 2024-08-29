@@ -25,26 +25,26 @@ class Favorito {
         $stmt->bindValue(':id_livro', $this->$id_livro);
         $stmt->execute();
         
-    }    catch (PDOException $erro) {
+        }    catch (PDOException $erro) {
           echo $erro->getMessage();
-    }
-    }
+        }
+     }
 
 
 
-      public function listarFavoritos($id_usuario);  
-      {
+      public function listarFavoritos($id_usuario) {
          try {
         $sql = "SELECT * FROM Favoritos WHERE id_usuario = :id_usuario";
         $stmt = $this->$conn->prepare($sql);
         $stmt->bindValue(':id_usuario', $this-> $id_usuario);
         $stmt->execute();
-
         $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }    catch (PDOException $erro) {
+
+         }catch (PDOException $erro) {
          echo $erro->getMessage();
     }
     }
 
+}
 }
 

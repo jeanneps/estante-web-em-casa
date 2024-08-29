@@ -11,8 +11,8 @@ $livros = livros::mostrarLivros();
         <?php foreach ($livros as $livro): ?>
 
             <img id="capa" src="data:image/jpeg;base64, <?php echo base64_encode($livro['capa']); ?>" alt="capa de livro">
-
-                <h2 id="titulo"><?php echo htmlspecialchars($livro['titulo']); ?></h2>
+            <h2 id="titulo"><?php echo htmlspecialchars($livro['titulo']); ?></h2>
+            <img src="/jeane/estante_web/imgs/favorito.svg" alt="">
 
         <?php endforeach; ?>
     </div>
