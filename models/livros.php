@@ -30,19 +30,17 @@ public function listarLivros()
 }
 
 
-static function mostrarLivrosId($id_livro)
+static function mostrarLivros()
 {
     try {
         $conn = Conexao::conectar();
-        $sql = 'SELECT * FROM livros WHERE id_livro = :id';
+        $sql = 'SELECT titulo, capa FROM livros' ;
         $stmt = $conn->prepare($sql);
-        $stmt->bindValue(':id', $id_livro);
 
         $stmt->execute();
 
-        $resultado = $stmt->fetch();
-       
-        return $resultado;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
 
     } catch (PDOException $erro) {
         echo $erro->getMessage();

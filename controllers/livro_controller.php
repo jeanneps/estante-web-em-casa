@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/models/livro.php';
-
+session_start();
 
 
 $titulo = $_POST['titulo'];
@@ -12,7 +12,7 @@ if(!empty($_FILES['capa']['tmp_name'])){
     $capa = file_get_contents($_FILES['capa']['tmp_name']);
 };
 
-$livro = new livro();
+$livro = new livros();
 $livro->titulo = $titulo;
 $livro->autor = $autor;
 $livro->sinopse = $sinopse;
