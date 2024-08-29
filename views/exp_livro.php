@@ -3,25 +3,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/models/livro.php';
 
 $id_livro = $_GET['id'];
-$mostar_livro = livro::mostrarLivro($id_livro);
+$mostar_livro = livros::selecionarLivro($id_livro);
 
 ?>
 <main>
 
-<img src="data:image;base64,<?= base64_encode($mostar_ivro['capa']) ?>" alt="" id="img_mostrarCampanha">
-    <div id="main-campanha">
-      <h1 class="nome_hospital">O <?= htmlspecialchars($mostar_campanha['hospital']) ?> precisa de doação de sangue do tipo</h1>
-      <span class="tipo_sanguineoCampanha"><?= htmlspecialchars($mostar_campanha['tipo_sanguineo']) ?></span>
+<img src="data:image;base64,<?= base64_encode($mostar_ivro['capa']) ?>" alt="">
+    <div>
+      <h1><?= htmlspecialchars($mostar_livro['autor']) ?></h1>
+      <h1><?= htmlspecialchars($mostar_livro['titulo']) ?></h1>
+      <h1><?= htmlspecialchars($mostar_livro['categoria']) ?></h1>
     </div>
-    <p class="paragrafo_campanha">Entre os dias <?= date_format(date_create(htmlspecialchars($mostar_campanha['data_inicio'])), 'd')  ?> a <?= date_format(date_create(htmlspecialchars($mostar_campanha['data_fim'])), 'd/m/Y') ?></p>
-
-    <p class="paragrafo_campanha">
-      Contatos:
-      <a href="#" id="telefone-link"><?= htmlspecialchars($mostar_campanha['telefone']) ?></a>
-
-
-
-
+    <div> <p><?= htmlspecialchars($mostar_livro['sinopse']) ?></p></div>
 
 
 <?php

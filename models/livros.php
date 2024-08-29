@@ -11,7 +11,7 @@ public $capa;
 
 
 
-public function listarLivros()
+public function cadastrarLivros()
 {
     try {
         $conn = Conexao::conectar();
@@ -41,6 +41,26 @@ static function mostrarLivros()
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     
+
+    } catch (PDOException $erro) {
+        echo $erro->getMessage();
+    }
+}
+
+
+static function selecionarLivro($id_livro)
+{
+    try {
+        $conn = Conexao::conectar();
+        $sql = 'SELECT * FROM livros WHERE id_livro = :id';
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(':id', $id_livro);
+
+        $stmt->execute();
+
+        $resultado = $stmt->fetch();
+       
+        return $resultado;
 
     } catch (PDOException $erro) {
         echo $erro->getMessage();

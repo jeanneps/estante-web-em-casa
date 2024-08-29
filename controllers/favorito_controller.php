@@ -1,33 +1,23 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/models/favoritos_models.php';
 
-class FavoritoController {
-    public $favorito;
 
-    public function __construct($pdo) {
-        $this->favorito = new Favorito($pdo);
-    }
 
-    public function adicionarFavorito($id_usuario, $id_livro) {
-        if ($this->favorito->adicionarFavorito($id_usuario, $id_livro)) {
-            echo "Favorito adicionado com sucesso!";
-        } else {
-            echo "Erro ao adicionar favorito.";
-        }
-    }
 
-    public function removerFavorito($id_usuario, $id_livro) {
-        if ($this->favorito->removerFavorito($id_usuario, $id_livro)) {
-            echo "Favorito removido com sucesso!";
-        } else {
-            echo "Erro ao remover favorito.";
-        }
-    }
 
-    public function listarFavoritos($id_usuario) {
-        $favoritos = $this->favorito->listarFavoritos($id_usuario);
-        foreach ($favoritos as $favorito) {
-            echo "ID Livro: " . $favorito['id_livro'] . "<br>";
-        }
-    }
-}
+// Verifica a ação a ser tomada
+//if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   // if (isset($_POST['adicionar'])) {
+    //    $id_usuario = $_POST['id_usuario'];
+   //     $id_livro = $_POST['id_livro'];
+   //     $favorito->adicionarFavorito($id_usuario, $id_livro);
+  //  } elseif (isset($_POST['remover'])) {
+   //     $id_usuario = $_POST['id_usuario'];
+   //     $id_livro = $_POST['id_livro'];
+   //     $favorito->removerFavorito($id_usuario, $id_livro);
+    //}
+//}
+
+// Exemplo de listagem de favoritos
+//$id_usuario = 1; // Exemplo de ID de usuário
+//$favoritos = $favorito->listarFavoritos($id_usuario);
