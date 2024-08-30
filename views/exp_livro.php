@@ -8,13 +8,13 @@ $livro = livros::selecionarLivro($id_livro);
 ?>
 <main>
 <div>
-  <img src="data:image;base64,<?= base64_encode($livro['capa']);?>" alt="">
+  <img src="data:image/jpeg;base64,<?= base64_encode($livro['capa']);?>" alt="">
     <h1><?= htmlspecialchars($livro['autor']); ?></h1>
     <h1><?= htmlspecialchars($livro['titulo']); ?></h1>
     <h1><?= htmlspecialchars($livro['categoria']); ?></h1>
   </div>
   
-    <p><?= htmlspecialchars($livro['sinopse']); ?></p>
+    <p><?= htmlspecialchars($livro['sinopse']) ?></p>
 
 
 
