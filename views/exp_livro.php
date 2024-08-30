@@ -1,8 +1,8 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/models/livros.php';
 
-$id_livro = $_GET['id'];
+$id_livro = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $livro = livros::selecionarLivro($id_livro);
 
 ?>
@@ -19,5 +19,5 @@ $livro = livros::selecionarLivro($id_livro);
 
 
   <?php
-  require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
+  // require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
   ?>
