@@ -3,22 +3,19 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/models/livros.php';
 
 $id_livro = $_GET['id'];
-$livros = livros::selecionarLivro($id_livro);
+$livro = livros::selecionarLivro($id_livro);
 
 ?>
 <main>
 <div>
-<?php foreach ($livros as $id_livro): ?>
-  <img src="data:image;base64,<?= base64_encode($livros['capa']);?>" alt="">
-    <h1><?= htmlspecialchars($livros['autor']) ?></h1>
-    <h1><?= htmlspecialchars($livros['titulo']) ?></h1>
-    <h1><?= htmlspecialchars($livros['categoria']) ?></h1>
+  <img src="data:image;base64,<?= base64_encode($livro['capa']);?>" alt="">
+    <h1><?= htmlspecialchars($livro['autor']); ?></h1>
+    <h1><?= htmlspecialchars($livro['titulo']); ?></h1>
+    <h1><?= htmlspecialchars($livro['categoria']); ?></h1>
   </div>
-  <div>
-    <p><?= htmlspecialchars($livros['sinopse']) ?></p>
+  
+    <p><?= htmlspecialchars($livro['sinopse']); ?></p>
 
-    <?php endforeach; ?>
-  </div>
 
 
   <?php
