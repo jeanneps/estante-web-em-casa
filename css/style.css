@@ -26,6 +26,9 @@ footer {
     padding: 1rem;
 
 }
+header {
+    font-size: 25px;
+}
 
 /* seleciona o nav
 coloca cor de fundo
@@ -34,58 +37,94 @@ cria uma grade de 5 colunas de larguras igual
 alinha o texto no centro da coluna
 espaçamento interno
 espaço entre as colunas e linhas do grid  */
+
 nav {
     background-color: var(--secundaria);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     text-align: center;
-    padding: 0.25;
-    gap: 0.5rem;
+    padding: 0.30rem;
+    /* gap: 0.5rem; */
     align-items: center;
-
+    position: relative;
+    font-weight: bold;
+    
 }
 
-/* seleciona todos os link dentro de navs
-remove a decoração dos links
-muda a cor da letra
-e a exibição do ponteiro do mouse para a mão */
 nav a {
     text-decoration: none;
     color: var(--preto);
     cursor: pointer;
+    
 }
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;   
-  
-  }
-  
-  .hamburger span {
-    width: 100%;
-    height: 2px;
-    background: black;
-  }
-  
-  .nav-links {
+
+.nav-links {
     display: none;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    padding: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-  }
-  
-  .hamburger:checked + .nav-links {
+    top: 40px; /* Ajuste conforme necessário */
+    right: 10px; /* Ajuste conforme necessário */
+    background-color: #333;
+    border-radius: 5px;
+    width: 200px; /* Ajuste conforme necessário */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px; 
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+.hamburguer {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
-  }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+     right: 10px;  
+}
+
+.hamburguer span {
+    background: #000;
+    height: 4px;
+    width: 15px;
+    margin: 2px 0;
+    transition: all 0.3s;
+}
+
+.hamburguer.active span:nth-child(1) {
+    transform: rotate(45deg);
+    margin: 0;
+}
+
+.hamburguer.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    margin: 0;
+}
+
+.nav-links.active {
+    display: block;
+}
   
 
 /*  qualquer item com essa class
@@ -679,6 +718,14 @@ input[type="tel"] {
 
     .container_perfil {
         width: 75vw;
+    }
+    .hamburguer {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
     }
 
 }

@@ -18,12 +18,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
                
                     <label for="senha">Senha:</label>
                     <input type="password" name="senha" id="senha" placeholder="senha..." required>
-            
-                    <label for="Contato">Contato:</label>
-                    <input type="tel" id="Contato" name="Contato" placeholder="(XX) XXXX-XXXX" pattern="[0-9]{2} [0-9]{4}-[0-9]{4}" required>
-            
-               
-
 
                     <button type="submit" value="Gravar">Gravar</button>
 

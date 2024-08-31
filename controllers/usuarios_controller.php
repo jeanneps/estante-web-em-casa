@@ -24,5 +24,6 @@ if(isset($foto_perfil)){
 
 
 $usuario->cadastrarUsuario();
+$usuario->editarUsuario();
 header('Location: /jeane/estante_web/views/login.php');
 exit();

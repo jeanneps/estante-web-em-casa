@@ -49,7 +49,7 @@ class Auth
 
     static function estarLogado()
     {
-        if (isset($_SESSION['usuario'])) {
+        if (isset($_SESSION['id_usuario'])) {
             return true;
         }
 
