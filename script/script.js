@@ -10,3 +10,10 @@ function displayImage(input) {
         reade.readAsDataURL(input.files[0]);
     }
   }
+// javascript do hamburguer
+  const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+});

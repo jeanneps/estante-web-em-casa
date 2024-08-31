@@ -9,16 +9,19 @@ class Favorito {
 
     public function adicionarFavorito($id_usuario, $id_livro) {
         try {
+        $conn = Conexao::conectar();
         $sql = "INSERT INTO Favoritos (id_usuario, id_livro) VALUES (:id_usuario, :id_livro)";
-        $stmt = $this-> $conn->prepare($sql);
+        $stmt = $conn->prepare($sql);
         $stmt->bindValue(':id_usuario', $this->$id_usuario);
         $stmt->bindValue(':id_livro', $this->$id_livro);
         $stmt->execute();
     }   catch (PDOException $erro) {
         echo $erro->getMessage();
     }
+}
     public function removerFavorito($id_usuario, $id_livro) {
         try {
+        $conn = Conexao::conectar();
         $sql = "DELETE FROM Favoritos WHERE id_usuario = :id_usuario AND id_livro = :id_livro";
         $stmt = $this->$conn->prepare($sql);
         $stmt->bindValue(':id_usuario', $this->$id_usuario);
@@ -28,12 +31,13 @@ class Favorito {
         }    catch (PDOException $erro) {
           echo $erro->getMessage();
         }
-     }
+  }
 
 
 
       public function listarFavoritos($id_usuario) {
          try {
+         $conn = Conexao::conectar();
         $sql = "SELECT * FROM Favoritos WHERE id_usuario = :id_usuario";
         $stmt = $this->$conn->prepare($sql);
         $stmt->bindValue(':id_usuario', $this-> $id_usuario);
@@ -46,5 +50,5 @@ class Favorito {
     }
 
 }
-}
+
 

@@ -17,8 +17,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
             </div>
             <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Infantil
             </div>
-            <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Terror
-            </div>
             <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Aventura
 
         </section>
