@@ -3,7 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 ?>
 
     <main id="favoritos">
-        <section class="container">
+        <!-- <section class="container">
 
             <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Didáticos
             </div>
@@ -19,7 +19,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
             </div>
             <div class="conteiner2"><img src="../imgs/seta.svg" alt="icone de seleção" width="30px" height="30px">Aventura
 
-        </section>
+        </section> -->
 
 
         <div class="container3"> Não há categorias adicionadas</div>

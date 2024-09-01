@@ -11,6 +11,7 @@ CREATE TABLE Usuarios (
     senha VARCHAR(255) NOT NULL, -- Senha do usuário (não nula)
     foto_perfil LONGBLOB, -- Caminho ou URL da foto de perfil do usuário
     nome VARCHAR(255) -- Nome do usuário
+    nivel_acesso INT DEFAULT 1
 );
 
 -- Cria a tabela 'Livros'
@@ -29,15 +30,6 @@ CREATE TABLE Categorias (
     nome_categoria VARCHAR(255) NOT NULL -- Nome da categoria (não nulo)
 );
 
--- Cria a tabela 'Livros_Categorias' para o relacionamento muitos-para-muitos entre livros e categorias
-CREATE TABLE Livros_Categorias (
-    id_livro INT, -- Identificador do livro (chave estrangeira)
-    id_categoria INT, -- Identificador da categoria (chave estrangeira)
-    PRIMARY KEY (id_livro, id_categoria), -- Chave primária composta das colunas id_livro e id_categoria
-    FOREIGN KEY (id_livro) REFERENCES Livros(id_livro) , -- Chave estrangeira referenciando 'Livros'
-    FOREIGN KEY (id_categoria) REFERENCES Categorias(id_categoria), -- Chave estrangeira referenciando 'Categorias'
-);
-
 -- Cria a tabela 'Favoritos' para armazenar os livros favoritados pelos usuários
 CREATE TABLE Favoritos (
     id_favorito INT AUTO_INCREMENT PRIMARY KEY, -- Identificador único do favorito (chave primária, autoincrementa)
@@ -46,7 +38,7 @@ CREATE TABLE Favoritos (
     FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario), -- Chave estrangeira referenciando 'Usuarios'
     FOREIGN KEY (id_livro) REFERENCES Livros(id_livro) -- Chave estrangeira referenciando 'Livros'
 );
-INSERT INTO estante (titulo, autor, sinopse, categoria, capa) VALUES ('Antes de Partir','Charlie Donlea','As pessoas que amamos ficam conosco para sempre... às vezes de maneiras surpreendentes. Um ano depois do avião em que o marido viajava desaparecer no oceano Pacífico, Abby Gamble ainda tenta superar a dor da perda. O relacionamento entre ela e Ben era incondicional, profundo, e se fortaleceu ainda mais ao terem de lidar com uma tragédia anos atrás. Abby sabia que Ben iria querer que ela seguisse em frente. Seu primeiro passo foi entrar de cabeça no trabalho, dedicando-se a sua empresa de cosméticos... até que ela conhece Joel, um médico cujo passado é tão repleto de cicatrizes quanto o dela. Joel nunca se perdoou por uma decisão que tomou ainda na infância, que resultou numa fatalidade. Esse evento o fez direcionar todas as suas escolhas de futuro para se redimir do passado. Quando conhece Abby, ele decide se dar uma nova chance, mas Abby ainda resiste à ideia de deixar a história com Ben para trás. No entanto, desde que o avião caiu, Ben busca uma maneira de voltar para Abby. De alguma forma, ele precisa reencontrar a esposa novamente.','Romance',''),
+INSERT INTO livros (titulo, autor, sinopse, categoria, capa) VALUES ('Antes de Partir','Charlie Donlea','As pessoas que amamos ficam conosco para sempre... às vezes de maneiras surpreendentes. Um ano depois do avião em que o marido viajava desaparecer no oceano Pacífico, Abby Gamble ainda tenta superar a dor da perda. O relacionamento entre ela e Ben era incondicional, profundo, e se fortaleceu ainda mais ao terem de lidar com uma tragédia anos atrás. Abby sabia que Ben iria querer que ela seguisse em frente. Seu primeiro passo foi entrar de cabeça no trabalho, dedicando-se a sua empresa de cosméticos... até que ela conhece Joel, um médico cujo passado é tão repleto de cicatrizes quanto o dela. Joel nunca se perdoou por uma decisão que tomou ainda na infância, que resultou numa fatalidade. Esse evento o fez direcionar todas as suas escolhas de futuro para se redimir do passado. Quando conhece Abby, ele decide se dar uma nova chance, mas Abby ainda resiste à ideia de deixar a história com Ben para trás. No entanto, desde que o avião caiu, Ben busca uma maneira de voltar para Abby. De alguma forma, ele precisa reencontrar a esposa novamente.','Romance',''),
 
 ('Armadilhas do Amor','Christina Lauren','Relacionamentos são parecidos com casas: sem um bom alicerce, desmoronam” Carey Duncan é o braço direito e superassistente do famoso casal de design e reforma de casas, Melissa e Rusty Tripp. Em dez anos, ela os ajudou a construir um verdadeiro império, e agora estão à beira do estrelato, com um novo programa de TV e o lançamento de um livro. Há apenas um problema: o casal favorito das câ¬meras não se suporta. James McCann é um gênio dos números e foi contratado por Rus¬ty como engenheiro para as obras de reformas, mas o trabalho não é nada do que ele pensou. E o desafio que surge é outro: tanto ele quan¬to Carey devem fazer uma turnê com os Tripp e evitar que tudo vá pelos ares. Afinal, nenhum deles pode se dar ao luxo de desistir. Carey precisa do emprego e os produtores prometeram a James o melhor cargo da sua vida se conseguirem manter o casal no caminho certo por mais algumas semanas. Uma tarefa que parece impossível... Enquanto viajam com os Tripp, Carey e James prometem tra¬balhar em conjunto para manter os segredos dos chefes ocultos e os empregos seguros. Mas eles vão passando muito tempo juntos e... se entre os Tripp só rolam brigas e confusão, entre Carey e James as faíscas não param de surgir.','Romance',''),
 

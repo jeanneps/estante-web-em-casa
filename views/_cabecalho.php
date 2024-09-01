@@ -1,5 +1,4 @@
 <?php
-// session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/auth/auth.php';
 $logado = Auth::estarLogado();
   
