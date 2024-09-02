@@ -1,22 +1,17 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/configs/conexao.php';
-session_start();
+session_start(); // Inicia a sessão
+
 class Auth
 {
-
     static function login($email, $senha)
     {
         try {
             $conn = Conexao::conectar();
-
-
             $sql = 'SELECT * FROM usuarios WHERE email = :email';
-
             $stmt = $conn->prepare($sql);
             $stmt->bindValue(':email', $email);
-
             $stmt->execute();
-
             $resultado = $stmt->fetch();
 
             if (!empty($resultado) && password_verify($senha, $resultado['senha'])) {
@@ -24,9 +19,9 @@ class Auth
                 $_SESSION['email'] = $resultado['email'];
                 $_SESSION['foto_perfil'] = $resultado['foto_perfil'];
                 $_SESSION['nome'] = $resultado['nome'];
+                $_SESSION['nivel_acesso'] = $resultado['nivel_acesso'];
 
-
-
+                // Redireciona para a página inicial ou página desejada
                 header('Location: /jeane/estante_web/index.php');
                 exit();
             } else {
@@ -49,14 +44,16 @@ class Auth
 
     static function estarLogado()
     {
-        if (isset($_SESSION['id_usuario'])) {
-            return true;
-        }
+        return isset($_SESSION['id_usuario']);
+    }
 
-        // if (isset($_SESSION['admin'])) {
-        //     return true;
-        // } else {
-        //     return false;
-        // }
+    static function painelAdmin()
+    {
+        if (!isset($_SESSION['nivel_acesso']) || $_SESSION['nivel_acesso'] != 2) {
+            header('Location: /jeane/estante_web/index.php');
+            exit();
+        }
     }
 }
+
+

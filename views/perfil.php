@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
+
 ?>
     <main class="perfil">
        <section class="container_perfil">
@@ -21,10 +22,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 
                     <button type="submit" value="Gravar">Gravar</button>
 
-                   <div><button type="submit" value="Gerenciar Categorias">Gerenciar Categorias</button></div>
-                   <div> <button type="submit" value="Gerenciar livros">Gerenciar livros</button></div>
-      
-    
+
+                   <!-- <div><button type="submit" value="Gerenciar Categorias">Gerenciar Categorias</button></div>
+                   <div> <button type="submit" value="Gerenciar livros">Gerenciar livros</button></div> -->
          </form>
 
         </section>

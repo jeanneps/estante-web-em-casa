@@ -6,4 +6,5 @@ $senha = $_POST['senha'];
 
 
 Auth::login($email, $senha);
+
 ?>

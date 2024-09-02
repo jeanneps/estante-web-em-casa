@@ -14,7 +14,11 @@ if (!$livro) {
 <main class="exp_livro">
 
     <div class="livros_conteiner2">
-       <div class="lado"> <img src="data:image/jpeg;base64,<?= base64_encode($livro['capa']); ?>" alt="capa do livro"><p style="font-size: 20px;"><?= htmlspecialchars($livro['sinopse']) ?></p></div>
+        <h1>Sinopse</h1>
+       <div class="lado"> <img src="data:image/jpeg;base64,<?= base64_encode($livro['capa']); ?>" alt="capa do livro">
+       <p style="font-size: 20px;"><?= htmlspecialchars($livro['sinopse']) ?>
+    </p>
+</div>
         <h4><?= htmlspecialchars($livro['autor']); ?></h4>
         <h1><?= htmlspecialchars($livro['titulo']); ?></h1>
         <h4><?= htmlspecialchars($livro['categoria']); ?></h4>

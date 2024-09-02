@@ -3,11 +3,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/models/livros.php';
 
 $livros = livros::mostrarLivros();
-$logado = Auth::estarLogado();  
+ 
 ?>
 
 <main id="index">
-<?php if ($logado): ?>  
+ 
 <div id="favoritos">
         <section class="container">
 
@@ -27,7 +27,7 @@ $logado = Auth::estarLogado();
 
         </section>
  </div>
- <?php endif; ?>
+ 
     <div class="livros_conteiner">
         <?php foreach ($livros as $livro): ?>
             <div class="livro">
