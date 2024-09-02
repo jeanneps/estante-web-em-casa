@@ -1,7 +1,5 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/auth/auth.php';
-session_start(); // Inicia a sessão
-
 Auth::painelAdmin(); // Verifica se o usuário tem permissão de admin
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';

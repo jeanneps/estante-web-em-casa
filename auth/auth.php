@@ -1,6 +1,5 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/configs/conexao.php';
-session_start(); // Inicia a sessão
 
 class Auth
 {
@@ -49,11 +48,11 @@ class Auth
 
     static function painelAdmin()
     {
+        session_start(); // Inicia a sessão se ainda não estiver iniciada
         if (!isset($_SESSION['nivel_acesso']) || $_SESSION['nivel_acesso'] != 2) {
             header('Location: /jeane/estante_web/index.php');
             exit();
         }
     }
 }
-
-
+?>
