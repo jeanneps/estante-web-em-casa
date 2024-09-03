@@ -66,7 +66,7 @@ public function __construct($id = false)
         }
     }
 
-
+//deletar livros
     static function deletarLivro($id_livro)
     {
         try {
@@ -80,6 +80,7 @@ public function __construct($id = false)
             echo $erro->getMessage();
         }
     }
+    //editar livros
     public function editarLivro() {
         try {
             $conn = Conexao::conectar();
