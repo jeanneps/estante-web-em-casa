@@ -36,8 +36,11 @@ $livros = livros::mostrarLivros();
                 <h2 class="titulo" ><?= htmlspecialchars($livro['titulo']); ?></h2>
             </a>
             
-        
-            <img src="/jeane/estante_web/imgs/favorito.svg" alt="" class="favorito2"> 
+            <form action="/estante_web/controllers/favoritar_livros_controller.php" method="post">
+          <input type="hidden" name="id_livro" value="<?= $livro['id_livro'] ?>">
+          <input type="hidden" name="id_usuario" value="<?= $_SESSION['id_usuario'] ?>">
+          <button type="submit"><img src="/jeane/estante_web/imgs/favorito.svg" alt="" class="favorito2"></button>
+             
             </div>
             <?php endforeach; ?>
     </div>

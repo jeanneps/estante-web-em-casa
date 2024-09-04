@@ -23,10 +23,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
                     <button type="submit" value="Gravar">Gravar</button>
 
 
-                   <!-- <div><button type="submit" value="Gerenciar Categorias">Gerenciar Categorias</button></div>
-                   <div> <button type="submit" value="Gerenciar livros">Gerenciar livros</button></div> -->
-         </form>
+                  
+                   <div> <a href="/jeane/Estante_Web/views/gerenciar.php" class="button">Gerenciar Categorias</a></div>
+                   <div> <a href="/jeane/Estante_Web/views/gerenciar_livros.php" class="button">Gerenciar Livros</a></div>
 
+                </form>
+
+    
         </section>
 
       
