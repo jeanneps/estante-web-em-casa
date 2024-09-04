@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/Estante_Web/models/categoria.php';
 
 
-// deletar categoria
+// deletar categoria ok
 $id = $_POST['id'];
 var_dump($id_categoria);
 

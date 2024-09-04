@@ -542,10 +542,10 @@ input[type="tel"] {
 .box {
     background-color: #915f32;
     width: 500px;
-    height: 70px;
+    height: 50px;
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -561,16 +561,17 @@ input[type="tel"] {
 
 .adicionar_categorias {
     box-sizing: border-box;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .ad_categorias {
     background-color: var(--secundaria);
     width: 500px;
-    height: 200px;
-    text-align: center
+    height: 400px;
+    text-align: center;
+
 }
 
 .gerenciar_livros2 {

@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/Estante_Web/models/categoria.php';
-// Adicionar categoria 
-$nome_categoria = $_POST['nome_categoria'];
+// Adicionar categoria ok
+$nome_categoria = $_POST['adicionar_categoria'];
 
 $categoria = new Categoria();
 $categoria->nome_categoria = $nome_categoria;

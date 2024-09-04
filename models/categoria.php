@@ -5,14 +5,23 @@ class Categoria {
     public $id_categoria;
     public $nome_categoria;
 
-
-    // Construct
-    public function __construct($id = false){
-        if($id){
-            $this->id_categoria = $id;
+    public function __construct($id_categoria = false) {
+        if ($id_categoria) {
+            $this->id_categoria = $id_categoria;
             $this->carregar();
         }
     }
+
+
+
+
+    // public function __construct($id_categoria = false)
+    // {
+    //     if ($id_categoria) {
+    //         $this->id_categoria = $id_categoria;
+    //         $this->carregar();
+    //     }
+    // }
 
     public function carregar(){
         $conn = Conexao::conectar();
@@ -56,7 +65,7 @@ class Categoria {
 //     }
 // }
 
-// Listar categorias (funcionou)
+// Listar categorias (funcionou) ok
 static function listarCategoria()
 {
     try {

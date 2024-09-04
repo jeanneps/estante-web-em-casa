@@ -1,20 +1,20 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
-?>>
+?>
 
     <main class="adicionar_categorias">
 
        <section class="gerenciar_livros2">
             <h2 class="box">
-                <img src="../jeane/imgs/setting.svg" alt="ícone de configuração" width="30px" height="30px">
+                <img src="/jeane/estante_web/imgs/setting.svg" alt="ícone de configuração" width="30px" height="30px">
                 Gerenciar Livros 
-                <img src="../jeane/imgs/config.svg" alt="ícone de seta" width="30px" height="30px"> </h2>
+                <img src="/jeane/estante_web/imgs/config.svg" alt="ícone de seta" width="30px" height="30px"> </h2>
                 
-           <div> <button type="submit" value="Adicionar">Adicionar</button></div>
-           <div> <button type="submit" value="Editar">Editar</button></div>
+               <div> <a href="/jeane/Estante_Web/views/adicionar_livros.php" class="button">Adicionar</a></div>
+           <div>   <a href="/jeane/Estante_Web/views/editar_livros.php" class="button">Editar</a></div>
         </section>
         
-    </main>
-    <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/rodape.php';
+ 
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
 ?>

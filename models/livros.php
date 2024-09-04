@@ -14,11 +14,29 @@ public function __construct($id = false)
 {
     if($id){
         $this->id_livro = $id;
+        $this->carregarLivro();
     }   
 }
-  
+// Construct
+public function carregarLivro(){
+    $conn = Conexao::conectar();
+    $sql = "SELECT * FROM livros WHERE id_livro = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindValue(':id', $this->id_livro);
+    $stmt->execute();
+    $resultado = $stmt->fetch();
+
+
+    $this->titulo = $resultado['titulo'];
+    $this->autor = $resultado['autor'];
+    $this->sinopse = $resultado['sinopse'];
+    $this->categoria = $resultado['categoria'];
+    $this->capa = $resultado['capa'];
+}
+
+
 // function para cadastrar livro pelo adim
-    public function cadastrarLivros()
+    public function AdicionarLivros()
     {
         try {
             $conn = Conexao::conectar();
@@ -64,6 +82,7 @@ public function __construct($id = false)
         } catch (PDOException $erro) {
             echo $erro->getMessage();
         }
+
     }
 
 //deletar livros
@@ -80,7 +99,7 @@ public function __construct($id = false)
             echo $erro->getMessage();
         }
     }
-    //editar livros
+    //atualizar livros
     public function editarLivro() {
         try {
             $conn = Conexao::conectar();
