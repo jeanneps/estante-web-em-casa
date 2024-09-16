@@ -1,11 +1,14 @@
 <?php
-// require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/auth/auth.php';
-Auth::painelAdmin(); // Verifica se o usuário tem permissão de admin
-
-// require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
+// Verifica se o usuário está logado e tem permissão de administrador
+// Verifica se o usuário está logado e se tem nível de acesso 2
+if (!Auth::estarLogado() || !isset($_SESSION['nivel_acesso']) || $_SESSION['nivel_acesso'] != 2) {
+    header('Location: /jeane/estante_web/views/login.php');
+    exit();
+}
 ?>
-<main class="perfil">
-    <section class="container_perfil">
+<main>
+    <section class="perfil_admin">
         <h1>Olá, Admin</h1>
         <form>
             <div><button type="submit" value="Gerenciar Categorias">Gerenciar Categorias</button></div>
@@ -13,6 +16,7 @@ Auth::painelAdmin(); // Verifica se o usuário tem permissão de admin
         </form>
     </section>
 </main>
-<?php
-// require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
-?>
+
+
+
+

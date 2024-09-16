@@ -1,778 +1,683 @@
-/* acessa todos os elementos
-remove todas a margens
-remove todos os paddings
-calcula automaticamente as larguras considerando: conteudo, bordas, margens e paddings */
-* {
+/* Acessa todos os elementos
+   Remove todas as margens e paddings
+   Calcula automaticamente as larguras considerando: conteúdo, bordas, margens e paddings */
+   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclui bordas e paddings no cálculo da largura e altura dos elementos */
 }
 
-/* acessa o elemento root e cria variaveis globais */
+/* Acessa o elemento root e cria variáveis globais para cores */
 :root {
-    --primaria: #915f32;
-    --secundaria: #ce9056;
-    --terciaria: #e1e6eb;
-    --branco: white;
-    --preto: black;
+    --primaria: #915f32; /* Cor primária */
+    --secundaria: #ce9056; /* Cor secundária */
+    --terciaria: #e1e6eb; /* Cor terciária */
+    --branco: white; /* Cor branca */
+    --preto: black; /* Cor preta */
 }
 
-/* seleciona o header e o footer
-coloca a cor de fundo e um espaçamento interno */
-
+/* Seleciona o header e o footer
+   Adiciona cor de fundo e espaçamento interno */
 header,
 footer {
-    background-color: var(--primaria);
-    padding: 1rem;
-
+    background-color: var(--primaria); /* Cor de fundo usando variável */
+    padding: 1rem; /* Espaçamento interno */
 }
+
 header {
-    font-size: 25px;
+    font-size: 20px; /* Tamanho da fonte no header */
 }
 
-/* seleciona o nav
-coloca cor de fundo
-muda o display para o grid
-cria uma grade de 5 colunas de larguras igual
-alinha o texto no centro da coluna
-espaçamento interno
-espaço entre as colunas e linhas do grid  */
-
+/* Seleciona o nav
+   Adiciona cor de fundo
+   Muda o display para grid
+   Cria uma grade de 5 colunas de larguras iguais
+   Alinha o texto no centro das colunas
+   Adiciona espaçamento interno e entre colunas/linhas do grid */
 nav {
-    background-color: var(--secundaria);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    text-align: center;
-    padding: 0.30rem;
-    /* gap: 0.5rem; */
-    align-items: center;
-    position: relative;
-    font-weight: bold;
-    
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    display: grid; /* Configura o display como grid */
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
+    text-align: center; /* Alinha o texto no centro das colunas */
+    padding: 0.30rem; /* Espaçamento interno */
+    /* gap: 0.5rem; */ /* Espaçamento entre colunas e linhas (comentado) */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    position: relative; /* Posiciona o nav relativamente ao seu contêiner */
+ 
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--preto);
-    cursor: pointer;
-    
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: var(--preto); /* Cor do texto usando variável */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o link */
 }
 
 .nav-links {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 40px; /* Ajuste conforme necessário */
-    right: 10px; /* Ajuste conforme necessário */
-    background-color: #333;
-    border-radius: 5px;
-    width: 200px; /* Ajuste conforme necessário */
+    display: none; /* Oculta o menu de links por padrão */
+    list-style: none; /* Remove a marcação de lista */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+    position: absolute; /* Posiciona o menu de links absolutamente ao pai */
+    top: 40px; /* Distância do topo (ajustável) */
+    right: 10px; /* Distância da direita (ajustável) */
+    background-color: #333; /* Cor de fundo do menu */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 200px; /* Largura do menu (ajustável) */
 }
 
 .nav-links li {
-    margin: 0;
+    margin: 0; /* Remove a margem dos itens da lista */
 }
 
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px; 
-    display: block;
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 8px; /* Espaçamento interno dos links */
+    display: block; /* Faz os links ocuparem toda a largura dos itens da lista */
 }
 
 .nav-links a:hover {
-    background-color: #575757;
+    background-color: #575757; /* Cor de fundo ao passar o mouse sobre o link */
 }
 
 .hamburguer {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-     right: 10px;  
+    background: none; /* Remove o fundo do botão hamburguer */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    display: flex; /* Configura o display como flex */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    position: absolute; /* Posiciona o botão absolutamente ao pai */
+    right: 10px; /* Distância da direita */
 }
 
 .hamburguer span {
-    background: #000;
-    height: 4px;
-    width: 15px;
-    margin: 2px 0;
-    transition: all 0.3s;
+    background: #000; /* Cor de fundo das linhas do botão */
+    height: 4px; /* Altura das linhas */
+    width: 15px; /* Largura das linhas */
+    margin: 2px 0; /* Espaçamento vertical entre as linhas */
+    transition: all 0.3s; /* Transição suave para todas as propriedades */
 }
 
 .hamburguer.active span:nth-child(1) {
-    transform: rotate(45deg);
-    margin: 0;
+    transform: rotate(45deg); /* Rotaciona a primeira linha em 45 graus quando ativo */
+    margin: 0; /* Remove o espaçamento vertical */
 }
 
 .hamburguer.active span:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Torna a segunda linha invisível quando ativo */
 }
 
 .hamburguer.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    margin: 0;
+    transform: rotate(-45deg); /* Rotaciona a terceira linha em -45 graus quando ativo */
+    margin: 0; /* Remove o espaçamento vertical */
 }
 
 .nav-links.active {
-    display: block;
+    display: block; /* Exibe o menu de links quando ativo */
 }
-  
 
-/*  qualquer item com essa class
-muda o display para flex
-coloca o espaço da horizontal mo meio dos elementos 
-ainha o intens na vertical com base no seu centro*/
+/* Qualquer item com essa classe
+   Muda o display para flex
+   Coloca o espaço horizontal no meio dos elementos
+   Alinha os itens verticalmente com base no centro */
 .logo-busca {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Configura o display como flex */
+    justify-content: space-between; /* Espaça os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
+    display: flex; /* Configura o display como flex */
+    flex-direction: column; /* Organiza os itens na coluna */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da viewport */
 }
 
 main {
-    flex-grow: 1;
-    background-color: var(--terciaria);
+    flex-grow: 1; /* Faz o main crescer para ocupar o espaço restante */
+    background-color: var(--terciaria); /* Cor de fundo usando variável */
 }
 
 #index {
- display: flex;
- justify-content: center;
- align-items: center;
- /* gap: 20px; */
- 
- 
+    display: flex; /* Configura o display como flex */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
 }
+
 .favorito2 {
-    width: 24px; /* Ajuste conforme necessário */
-    height: 24px; /* Ajuste conforme necessário */
-    cursor: pointer;
-    margin-top: 5px; /* Ajuste conforme necessário */
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o ícone */
 }
+
 .livros_conteiner {
-    border: 1px solid black;
-    width: 100%;
-    max-width: 800px; /* Ajuste conforme necessário */
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-
-
+    display: flex; /* Configura o display como flex */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
 }
-.exp_livro{
-display: flex;
-justify-content: center;
-align-items: center;
 
-
-
+/* Estilos para a seção de favoritos */
+#favoritos .conteiner2 {
+    display: inline-block; /* Exibe o contêiner como um bloco em linha */
+    margin: 10px; /* Margem ao redor do contêiner */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda ao redor do contêiner */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o contêiner */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
 }
+
+#favoritos .conteiner2:hover {
+    background-color: var(--secundaria); /* Cor de fundo ao passar o mouse sobre o contêiner */
+}
+
+.exp_livro {
+    display: flex; /* Configura o display como flex */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+}
+
 .livros_conteiner2 {
-    border: 1px solid black;
-    background-color: var(--secundaria);
-    width: 100%;
-    max-width: 950px; /* Ajuste conforme necessário */
-    height: auto;
-    margin-top: 5px;
-    justify-content: center;
-    
+    border: none; /* Remove a borda do contêiner */
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    width: 100%; /* Largura completa do contêiner pai */
+    max-width: 950px; /* Largura máxima */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    margin-top: 5px; /* Margem superior */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
 }
+
 .lado {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* Configura o display como flex */
+    justify-content: space-around; /* Espaça os itens horizontalmente */
 }
+
 .livro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 10px;
+    width: 200px; /* Largura do item do livro */
+    margin: 20px; /* Margem ao redor do item do livro */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
 .capa {
-    border: 1px solid black ;
-    width: 140px;
-    height: 230px;
-    overflow: hidden;
-    cursor: pointer;
+    width: 150px; /* Largura da capa do livro */
+    height: 200px; /* Altura da capa do livro */
+    object-fit: cover; /* Ajusta a imagem para cobrir o elemento sem distorcer */
 }
+
 .titulo {
-font-size: 15px;
-font-family: 'Times New Roman', Times, serif;
-margin: 10px ;
-/* padding: 0 5px; */
+    font-size: 18px; /* Tamanho da fonte do título */
+    margin-top: 10px; /* Margem superior ao título */
 }
 
 footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    color: var(--terciaria);
-    text-align: center;
-
+    display: grid; /* Configura o display como grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+    color: var(--terciaria); /* Cor do texto usando variável */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
 #copy {
-    text-align: start;
+    text-align: start; /* Alinha o texto à esquerda */
 }
 
 #alinhar {
-    display: flex;
-    align-items: center;
+    display: flex; /* Configura o display como flex */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 .img-fim {
-    display: flex;
-    justify-content: end;
+    display: flex; /* Configura o display como flex */
+    justify-content: end; /* Alinha o conteúdo horizontalmente ao final */
 }
 
 .img-fim img {
-    margin: 0 1rem;
+    margin: 0 1rem; /* Margem horizontal ao redor das imagens */
 }
 
-/* 
-main de quem somos 
-organiza em cima a baixo
-centraliza o texto
-centraliza todo o quadrado
-alinha no centro
-da espaco entre eles
- */
+/* Main de quem somos
+   Organiza em cima a baixo
+   Centraliza o texto
+   Centraliza todo o quadrado
+   Alinha no centro
+   Dá espaço entre eles */
 .quem_somos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 100px;
+    display: flex; /* Configura o display como flex */
+    flex-direction: column; /* Organiza os itens na coluna */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 100px; /* Espaçamento interno */
 }
 
 #quem_somos {
-    font-size: 30px;
+    font-size: 30px; /* Tamanho da fonte do título */
 }
 
-/* cor de fundo
-tamanho da caixa
-margin para baixo */
+/* Cor de fundo
+   Tamanho da caixa
+   Margem para baixo */
 .box_quemsomos {
-    background-color: var(--primaria);
-    width: 200px;
-    margin-bottom: 40px;
-
-
+    background-color: var(--primaria); /* Cor de fundo usando variável */
+    width: 200px; /* Largura da caixa */
+    margin-bottom: 40px; /* Margem inferior */
 }
 
-/* organiza em coluna
-centraliza o texto
-centraliza os itens
-tamango da fonte */
+/* Organiza em coluna
+   Centraliza o texto
+   Centraliza os itens
+   Tamanho da fonte */
 #contato {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Configura o display como flex */
+    flex-direction: column; /* Organiza os itens na coluna */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    font-size: 30px; /* Tamanho da fonte */
 }
 
 #paragrafo {
-    padding: 20px;
+    padding: 20px; /* Espaçamento interno */
 }
 
-
-/* cor de fundo 
-tamanho e largura da caixa width e height
-alinha o texto no centro
-arredonda a borda da caixa
-organiza em coluna
-centraliza os itens na vertical
-centraliza os itens na horizontal*/
+/* Cor de fundo
+   Tamanho e largura da caixa width e height
+   Alinha o texto no centro
+   Arredonda a borda da caixa
+   Organiza em coluna
+   Centraliza os itens na vertical
+   Centraliza os itens na horizontal */
 .box_usuario {
-    background-color: var(--secundaria);
-    width: 350px;
-    height: 300px;
-    text-align: center;
-    border-radius: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    width: 350px; /* Largura da caixa */
+    height: 300px; /* Altura da caixa */
+    text-align: center; /* Alinha o texto ao centro */
+    border-radius: 70px; /* Bordas arredondadas */
+    display: flex; /* Configura o display como flex */
+    flex-direction: column; /* Organiza os itens na coluna */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
 }
 
-/* input para digitar email
-tamanho da caixa
-preenchimento de dentro da caixa
-tamanho da fonte(letras)
-borda em volta da caixa
-arredonda a borda da caixa  */
+/* Input para digitar email
+   Tamanho da caixa
+   Preenchimento de dentro da caixa
+   Tamanho da fonte (letras)
+   Borda em volta da caixa
+   Arredonda a borda da caixa */
 input[type="email"] {
-    width: calc(100% - 20px);
-    padding: 4px;
-    font-size: 15px;
-    border: 2px solid #000;
-    border-radius: 4px;
-
+    width: calc(100% - 20px); /* Largura total menos o padding */
+    padding: 4px; /* Preenchimento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    border: 2px solid #000; /* Borda ao redor da caixa */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
-/* input para digitar senha
-tamanho da caixa
-preenchimento de dentro da caixa
-tamanho da fonte(letras)
-borda em volta da caixa
-arredonda a borda da caixa  */
+/* Input para digitar senha
+   Tamanho da caixa
+   Preenchimento de dentro da caixa
+   Tamanho da fonte (letras)
+   Borda em volta da caixa
+   Arredonda a borda da caixa */
 input[type="password"] {
-    width: calc(100% - 20px);
-    padding: 4px;
-    font-size: 15px;
-    border: 2px solid #000;
-    border-radius: 4px;
+    width: calc(100% - 20px); /* Largura total menos o padding */
+    padding: 4px; /* Preenchimento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    border: 2px solid #000; /* Borda ao redor da caixa */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
-/* label texto acima da caixa se senha e login
-distancia da caixa */
+/* Label texto acima da caixa se senha e login
+   Distância da caixa */
 label {
-    display: block;
-    margin-bottom: 8px;
-
-    font-size: 15px;
+    display: block; /* Exibe o label como um bloco */
+    margin-bottom: 8px; /* Margem inferior */
+    font-size: 15px; /* Tamanho da fonte */
 }
 
-/* class usuario main 
-alinha os itens ao centro
-centraliza todo o item */
-
+/* Classe usuario main
+   Alinha os itens ao centro
+   Centraliza todo o item */
 .usuario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: flex; /* Configura o display como flex */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    flex-direction: column; /* Organiza os itens na coluna */
 }
 
-/* botao de entrar
-tamanho e largura
-cor de fundo 
-cor preta
-borda do botao
-curso para ficar uma mão no lugar da seta */
+/* Botão de entrar
+   Tamanho e largura
+   Cor de fundo
+   Cor preta
+   Borda do botão
+   Cursor para ficar uma mão no lugar da seta */
 button {
-    width: 30%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: var(--primaria) color#000 border none;
-    cursor: pointer;
-
+    width: 30%; /* Largura do botão */
+    padding: 10px; /* Preenchimento interno */
+    margin-top: 10px; /* Margem superior */
+    background-color: var(--primaria); /* Cor de fundo usando variável */
+    color: #000; /* Cor do texto */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
 }
 
 button:houver {
-    background-color: var(--primaria);
+    background-color: var(--primaria); /* Cor de fundo ao passar o mouse sobre o botão (correta: deve ser `button:hover`) */
 }
 
 button:focus {
-    outline: none;
+    outline: none; /* Remove o contorno ao focar no botão */
 }
 
-#favoritos {
-    margin: 0;
-    padding: 0;
-
-}
-/* conteier de favoritos */
+/* Container de favoritos */
 .container {
-    width: 200px;
-    height: 500px;
-    /* largura do container */
-     /* margin: 20px;  */
-    padding: 15px;  
-    /* preenchimento interno */ 
-     background-color: var(--secundaria);
-    /* border-radius: 50px;  */
-     display: flex;
-    flex-direction: column;
-    margin-bottom: 800px; 
-    position: sticky; 
-    /* top: 0; */
-    
- }  
-/* 
-conteiner de favoritos
-borda do conteiner
-altura e largura do conteiner
-margin arrasta para baixo
-alinha os itens no centro horizontal
-alinha os itens no centro vertical */
-.conteiner2 {
-    border: 1px solid #000; 
-    width: 150px;
-    height: 50px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 500px; /* Margem inferior */
 }
-/* conteiner de favoritos */
+
 .container3 {
-    width: 1200px;
-    height: 750px;
-    /* largura do container */
-    margin: 50px;
-    /* margem externa para espaçamento */
-    box-sizing: border-box;
-    /* incluir borda e preenchimento na largura */
-    background-color: var(--secundaria);
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 1200px; /* Largura do container */
+    height: 750px; /* Altura do container */
+    margin: 50px; /* Margem ao redor do container */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no cálculo da largura */
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    border-radius: 50px; /* Bordas arredondadas */
+    display: flex; /* Configura o display como flex */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
 }
-/* altura e largura do formulario foto */
+
+/* Altura e largura do formulário de foto */
 #foto {
-    width: 140px;
-    height: 120px;
-    object-fit: cover;
-    overflow: hidden;
+    width: 140px; /* Largura da foto */
+    height: 120px; /* Altura da foto */
+    object-fit: cover; /* Ajusta a imagem para cobrir o elemento sem distorcer */
+    overflow: hidden; /* Oculta o excesso de imagem fora da área */
 }
-/* main da pagina de cadastro 
-alinha todos os itens centro horizontal e vertical*/
+
+/* Main da página de cadastro
+   Alinha todos os itens ao centro horizontal e vertical */
 .cadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+    display: flex; /* Configura o display como flex */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
-/* conteiner do cadastro 
-cor de fundo 
-altura e largura 
-borda arredondada
-alinha os itens em coluna
-alinha os itens no centro vertical*/
+
+/* Container do cadastro
+   Cor de fundo
+   Altura e largura
+   Borda arredondada
+   Alinha os itens em coluna
+   Alinha os itens no centro vertical */
 .box_cadastro {
-    background-color: var(--secundaria);
-    width: 350px;
-    height: 400px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    width: 350px; /* Largura do container */
+    height: 400px; /* Altura do container */
+    border-radius: 50px; /* Bordas arredondadas */
+    display: flex; /* Configura o display como flex */
+    flex-direction: column; /* Organiza os itens na coluna */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
 }
-/* input foto */
+
+/* Input foto */
 input[type="file"] {
-    width: calc(100% - 20px);
-    padding: 4px;
-    font-size: 15px;
-    border: 2px solid #000;
-    border-radius: 10px;
+    width: calc(100% - 20px); /* Largura total menos o padding */
+    padding: 4px; /* Preenchimento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    border: 2px solid #000; /* Borda ao redor da caixa */
+    border-radius: 10px; /* Bordas arredondadas */
 }
-/* intut nome */
+
+/* Input nome */
 input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 4px;
-    font-size: 15px;
-    border: 2px solid #000;
-    border-radius: 4px;
+    width: calc(100% - 20px); /* Largura total menos o padding */
+    padding: 4px; /* Preenchimento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    border: 2px solid #000; /* Borda ao redor da caixa */
+    border-radius: 4px; /* Bordas arredondadas */
 }
-/* main da pagina perfil */
+
+/* Main da página perfil */
 .perfil {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Configura o display como flex */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
 }
-/* input foto da pagina perfil */
+
+/* Input foto da página perfil */
 #foto_de_perfil {
-    width: 140px;
-    height: 120px;
-    object-fit: cover;
-    overflow: hidden;
+    width: 140px; /* Largura da foto */
+    height: 120px; /* Altura da foto */
+    object-fit: cover; /* Ajusta a imagem para cobrir o elemento sem distorcer */
+    overflow: hidden; /* Oculta o excesso de imagem fora da área */
 }
-/* input imagem da pagina adicionar livro */
+
+/* Input imagem da página adicionar livro */
 #adicionar_imagem {
-    width: 140px;
-    height: 120px;
-    object-fit: cover;
-    overflow: hidden;
+    width: 140px; /* Largura da imagem */
+    height: 120px; /* Altura da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o elemento sem distorcer */
+    overflow: hidden; /* Oculta o excesso de imagem fora da área */
 }
-/* conteiner da pagina perfil */
+
+/* Container da página perfil */
 .container_perfil {
-    width: 400px;
-    height: 600px;
-    margin: 20px;
-    background-color: var(--secundaria);
-    padding: 15px;
+    width: 400px; /* Largura do container */
+    height: 600px; /* Altura do container */
+    margin: 20px; /* Margem ao redor do container */
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    padding: 15px; /* Espaçamento interno */
 }
-/* input de contato */
+
+/* Input de contato */
 input[type="tel"] {
-    width: calc(100% - 20px);
-    padding: 4px;
-    font-size: 15px;
-    border: 2px solid #000;
-    border-radius: 4px;
+    width: calc(100% - 20px); /* Largura total menos o padding */
+    padding: 4px; /* Preenchimento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    border: 2px solid #000; /* Borda ao redor da caixa */
+    border-radius: 4px; /* Bordas arredondadas */
 }
 
+/* Gerenciar categorias
+   Organiza os itens ao centro horizontal e vertical */
 .gerenciar_categorias {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    display: flex; /* Configura o display como flex */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
 }
 
+/* Categorias
+   Cor de fundo
+   Largura e altura
+   Organiza os itens em coluna */
 .categorias {
-    background-color: var(--secundaria);
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    width: 500px; /* Largura do container */
+    height: 500px; /* Altura do container */
+    display: flex; /* Configura o display como flex */
+    flex-direction: column; /* Organiza os itens na coluna */
+    align-items: center; /* Alinha os itens horizontalmente ao centro */
 }
 
+/* Box
+   Cor de fundo
+   Largura e altura
+   Margem inferior
+   Organiza os itens */
 .box {
-    background-color: #915f32;
-    width: 500px;
-    height: 50px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: #915f32; /* Cor de fundo */
+    width: 500px; /* Largura do box */
+    height: 50px; /* Altura do box */
+    margin-bottom: 20px; /* Margem inferior */
+    display: flex; /* Configura o display como flex */
+    justify-content: space-around; /* Distribui os itens com espaço ao redor */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
+/* Categorias 2
+   Borda
+   Largura e altura
+   Margem inferior
+   Organiza os itens */
 .categorias2 {
-    border: 2px solid #000;
-    width: 350px;
-    height: 70px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    border: 2px solid #000; /* Borda ao redor do box */
+    width: 350px; /* Largura do box */
+    height: 70px; /* Altura do box */
+    margin-bottom: 10px; /* Margem inferior */
+    display: flex; /* Configura o display como flex */
+    justify-content: space-evenly; /* Distribui os itens igualmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
+/* Adicionar categorias
+   Configura o box-sizing */
 .adicionar_categorias {
-    box-sizing: border-box;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    box-sizing: border-box; /* Inclui borda e preenchimento no cálculo da largura */
 }
 
+/* Ad categorias
+   Cor de fundo
+   Largura e altura
+   Alinha o texto ao centro */
 .ad_categorias {
-    background-color: var(--secundaria);
-    width: 500px;
-    height: 400px;
-    text-align: center;
-
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    width: 500px; /* Largura do container */
+    height: 400px; /* Altura do container */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Gerenciar livros 2
+   Cor de fundo
+   Largura e altura
+   Alinha o texto ao centro */
 .gerenciar_livros2 {
-    background-color: var(--secundaria);
-    width: 500px;
-    height: 270px;
-    text-align: center;
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    width: 500px; /* Largura do container */
+    height: 270px; /* Altura do container */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Ad livros
+   Cor de fundo
+   Largura e altura
+   Alinha o texto ao centro
+   Margem */
 .ad_livros {
-    background-color: var(--secundaria);
-    width: 500px;
-    height: 700px;
-    text-align: center;
-    margin: 15px;
+    background-color: var(--secundaria); /* Cor de fundo usando variável */
+    width: 500px; /* Largura do container */
+    height: 700px; /* Altura do container */
+    text-align: center; /* Alinha o texto ao centro */
+    margin: 15px; /* Margem ao redor do container */
 }
 
+/* Adicionar livros
+   Configura o display como flex
+   Alinha os itens ao centro */
 #adicionar_livros {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Configura o display como flex */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
 }
 
+/* Adicionar imagem
+   Largura e altura
+   Ajusta a imagem para cobrir o elemento sem distorcer */
 #adicionar_imagem {
-    width: 140px;
-    height: 120px;
-    object-fit: cover;
-    overflow: hidden;
+    width: 140px; /* Largura da imagem */
+    height: 120px; /* Altura da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o elemento sem distorcer */
+    overflow: hidden; /* Oculta o excesso de imagem fora da área */
 }
 
+/* Estilos responsivos para telas menores */
 @media screen and (max-width: 768px) {
     body {
-        overflow-x: hidden;
-        /* Impede a rolagem horizontal */
+        overflow-x: hidden; /* Impede a rolagem horizontal */
     }
 
     header {
-        padding: 10px;
-        /* Adicione um espaçamento interno para evitar que o conteúdo encoste nas bordas */
+        padding: 10px; /* Adiciona espaçamento interno ao header */
     }
 
     nav {
-        overflow-x: auto;
-        /* Permita a rolagem horizontal apenas dentro do nav se necessário */
-        white-space: nowrap;
-        /* Impede a quebra de linha dos links */
-
+        overflow-x: auto; /* Permite rolagem horizontal no nav se necessário */
+        white-space: nowrap; /* Impede a quebra de linha dos links */
     }
 
     .container {
-        width: 50%;
-        /* Use uma largura percentual para garantir que se ajuste à largura da tela */
-        max-width: 100%;
-        /* Garante que não exceda a largura da tela */
-        margin: 10px auto;
-        /* Centraliza o container e adiciona um espaço mínimo nas margens */
-        padding: 15px;
-        background-color: var(--secundaria);
-        border-radius: 20px;
+        width: 50%; /* Largura percentual para ajuste à tela */
+        max-width: 100%; /* Garante que não exceda a largura da tela */
+        margin: 10px auto; /* Centraliza o container e adiciona espaço nas margens */
+        padding: 15px; /* Espaçamento interno */
+        background-color: var(--secundaria); /* Cor de fundo usando variável */
+        border-radius: 20px; /* Bordas arredondadas */
     }
 
     .conteiner2 {
-        width: 80%;
-        /* Ocupa 100% da largura do container pai */
-        height: auto;
-        /* Altura automática para se ajustar ao conteúdo */
-        margin-bottom: 5px;
-        border: 1px solid #000;
-        text-align: center;
-        /* Centraliza o conteúdo horizontalmente */
-        padding: 8px;
+        width: 80%; /* Largura percentual para ajuste à tela */
+        height: auto; /* Altura automática para ajuste ao conteúdo */
+        margin-bottom: 5px; /* Margem inferior */
+        border: 1px solid #000; /* Borda ao redor da caixa */
+        text-align: center; /* Alinha o texto ao centro */
+        padding: 8px; /* Espaçamento interno */
     }
 
     .container3 {
-        width: 80%;
-        /* Use uma largura percentual para garantir que se ajuste à largura da tela */
-        max-width: 100%;
-        /* Garante que não exceda a largura da tela */
-        margin: 5px auto;
-        /* Centraliza o container e adiciona um espaço mínimo nas margens */
-        padding: 10px;
-        background-color: var(--secundaria);
-        border-radius: 20px;
-        text-align: center;
-        /* Centraliza o conteúdo horizontalmente */
+        width: 80%; /* Largura percentual para ajuste à tela */
+        max-width: 100%; /* Garante que não exceda a largura da tela */
+        margin: 5px auto; /* Centraliza o container e adiciona espaço nas margens */
+        padding: 10px; /* Espaçamento interno */
+        background-color: var(--secundaria); /* Cor de fundo usando variável */
+        border-radius: 20px; /* Bordas arredondadas */
+        text-align: center; /* Alinha o texto ao centro */
     }
 
     footer {
-        padding: 10px;
-        /* Adicione um espaçamento interno para evitar que o conteúdo encoste nas bordas */
-        text-align: center;
-        /* Centraliza o conteúdo horizontalmente */
+        padding: 10px; /* Espaçamento interno ao footer */
+        text-align: center; /* Alinha o texto ao centro */
     }
 
     .box_cadastro {
-        height: 125vw;
-        width: 80vw;
-        border-radius: 8vw;
+        height: 125vw; /* Altura ajustada para tela menor */
+        width: 80vw; /* Largura ajustada para tela menor */
+        border-radius: 8vw; /* Bordas arredondadas ajustadas para tela menor */
     }
 
     .categorias {
-        width: 70vw;
-        height: 100vw;
+        width: 70vw; /* Largura ajustada para tela menor */
+        height: 100vw; /* Altura ajustada para tela menor */
     }
 
     .gerenciar_categorias {
-        padding: 0;
-        margin: 0;
+        padding: 0; /* Remove o padding */
+        margin: 0; /* Remove a margem */
     }
 
     .categorias2 {
-        width: 45vw;
-        height: 150vw;
+        width: 45vw; /* Largura ajustada para tela menor */
+        height: 150vw; /* Altura ajustada para tela menor */
     }
 
     .box {
-        width: 70vw;
+        width: 70vw; /* Largura ajustada para tela menor */
     }
 
     .gerenciar_livros2 {
-        width: 70vw;
+        width: 70vw; /* Largura ajustada para tela menor */
     }
 
     .adicionar_categorias {
-        margin: 0;
-        padding: 0;
+        margin: 0; /* Remove a margem */
+        padding: 0; /* Remove o padding */
     }
 
     .ad_livros {
-        width: 70vw;
+        width: 70vw; /* Largura ajustada para tela menor */
     }
 
     textarea {
-        width: 100%;
-        /* 100% da largura do container pai */
-        height: 100px;
-        /* Altura específica para o textarea */
-        resize: vertical;
-        /* Permite redimensionamento vertical */
+        width: calc(100% - 20px); /* Largura total menos o padding */
     }
-
-    .ad_categorias {
-        width: 70vw;
-    }
-
-    .ad_livros {
-        width: 70vw;
-    }
-
-    #quem_somos {
-        font-size: 5vw;
-
-    }
-
-    .quem_somos {
-        margin: 0;
-        padding: 0;
-    }
-
-    .box_quemsomos {
-        margin-top: 10vw;
-    }
-
-    .contato {
-        padding: 10px;
-    }
-
-    #paragrafo {
-        padding: 10px;
-        text-align: center;
-    }
-
-    /*  form {
-        margin-left: 0;
-        margin-top: 3px;
-        /* Espaçamento entre o título e o formulário em telas menores */
-
-    .box_usuario {
-        width: 70vw;
-        margin-bottom: 15vw;
-        max-width: 100%;
-        /* Garante que o conteúdo não ultrapasse a largura da tela */
-        padding: 0 10px;
-        /* Exemplo de ajuste de padding para evitar a rolagem lateral */
-    }
-
-    .logo-busca {
-        white-space: nowrap;
-        /* Impede a quebra de linha dos links */
-    }
-
-    .container_perfil {
-        width: 75vw;
-    }
-    .hamburguer {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex;
-        justify-content: space-around;
-    }
-
 }

@@ -1,11 +1,11 @@
 <?php
-// require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/auth/auth.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.php';
 
-?>
-<?php if (isset($_COOKIE['aviso'])): ?>
+// Verifica se há um cookie de aviso e exibe sua mensagem
+if (isset($_COOKIE['aviso'])): ?>
     <h1><?= $_COOKIE['aviso'] ?></h1>
     <?php
+    // Remove o cookie de aviso após a exibição da mensagem
     setcookie('aviso', '', time() - 3600, '/jeane/estante_web/');
     ?>
 <?php endif; ?>
@@ -13,7 +13,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 <main class="usuario">
     <section class="box_usuario">
         <h1>Acesse sua conta</h1>
-        <form action="/jeane/estante_web/controllers/login_controller.php" method="post">
+        <form action="/jeane/estante_web/controllers/admin_controller.php" method="post">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required autocomplete="email">
             <label for="senha">Senha:</label>
@@ -27,4 +27,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 </main>
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
+?>
+
 
