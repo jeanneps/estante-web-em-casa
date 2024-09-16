@@ -3,7 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
 require_once $_SERVER['DOCUMENT_ROOT'] . '/estante_web/models/favoritos.php';
 
 
-$listar_favorito = Favorito::listarFavoritos($_SESSION['id_usuario']);
+//$listar_favorito = Favorito::listarFavoritos($_SESSION['id_usuario']);
 ?>
 
     <main id="favoritos">
