@@ -29,14 +29,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_cabecalho.ph
             <label for="senha">Senha:</label>
             <input type="password" name="senha" id="senha" placeholder="Senha..." required>
 
-            <!-- Botão para submeter o formulário -->
-            <button type="submit" value="Gravar">Gravar</button>
-            
-        </form>
-    </section>
-</main>
+                    <button type="submit" value="Gravar">Gravar</button>
 
-<?php
-// Inclui o rodapé do site
+
+                   <!-- <div><button type="submit" value="Gerenciar Categorias">Gerenciar Categorias</button></div>
+                   <div> <button type="submit" value="Gerenciar livros">Gerenciar livros</button></div> -->
+         </form>
+
+        </section>
+
+      
+    </main>
+    <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/jeane/estante_web/views/_rodape.php';
 ?>
